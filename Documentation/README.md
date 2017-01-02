@@ -25,6 +25,9 @@ A few pictures of the inside of the PC-link cable, for those who never had one (
 ## README.md
 The file you're reading.
 
+## SAA2003.PDF
+The SAA2003 is the Stereo Filter and Codec (SFC) which takes care of compressing and decompressing the PASC data to/from PCM data. It looks like it may also be used to recover the clock signals (/L3REF, SBCL and SBWS) when the DCC-175 is recording from the PC, but this is not clear at the time of this writing.
+
 ## SAA3323.PDF
 The SAA3323 is the Drive Processor which is in every DCC recorder of the second generation (the first generation had a different chip that did the same thing). The SAA3323 DRP and the microcontroller work together to make the DCC recorder work.
 
