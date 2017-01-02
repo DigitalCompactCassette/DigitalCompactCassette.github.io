@@ -28,7 +28,7 @@ The file you're reading.
 ## SAA3323.PDF
 The SAA3323 is the Drive Processor which is in every DCC recorder of the second generation (the first generation had a different chip that did the same thing). The SAA3323 DRP and the microcontroller work together to make the DCC recorder work.
 
-The PC-Link cable is connected to the microcontroller, not to the SAA3323, but the data sheet provides some information about how a DCC recorder works. Unfortunately the manual assumes a lot of knowledge from the reader so it may be somewhat hard to read.
+The PC-Link cable is connected to the microcontroller and the SAA3323. Unfortunately the manual assumes a lot of knowledge from the reader so it may be somewhat hard to read.
 
 ## Shuttle EPST-1 docs.ZIP
 Shuttle Technologies was the name of a company that produced interfaces to connect SCSI devices to (IEEE-1284) parallel ports. This zip file contains some information about the EPST-1 parallel-to-SCSI adapter. This may be totally irrelevant to DCC and the PC-link cable, but it might help to reverse-engineer the ECP and 4-bit data transfer protocols that the PC-link cable is capable of.
