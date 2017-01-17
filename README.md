@@ -13,7 +13,7 @@ Nevertheless, any text that was recorded on "Super User Tapes" (using a third-ge
 ## References
 The DCC-FAQ is currently located at (http://xs4all.goudsm.it/dcc-faq.html). It hasn't been really maintained since 1997 and though there is interesting information in there, it's definitely outdated and incomplete, and perhaps incorrect where I made assumptions from second-hand information. A better source of generic information about DCC is the [English Wikipedia page](https://en.wikipedia.org/wiki/Digital_Compact_Cassette) which I also mostly wrote, and maintain on a somewhat regular basis (I go there a few times a year and check the latest edits to make sure nothing bad sneaks in).
 
-Another good source is La Taverne de John John, a [YouTube Channel](https://www.youtube.com/user/vhsmemory), and [Blog site](http://www.jonathandupre.fr/articles/16-digital-compact-cassette-dcc/) by Jonathan Dupré (both in French). He has a '''lot''' of information about all the DCC recorders and players, and has repaired most (if not all) of them.
+Another good source is La Taverne de John John, a [YouTube Channel](https://www.youtube.com/user/vhsmemory), and [Blog site](http://www.jonathandupre.fr/articles/16-digital-compact-cassette-dcc/) by Jonathan Dupré (both in French). He has a _lot_ of information about all the DCC recorders and players, and has repaired most (if not all) of them.
 
 There are also some great pages at [Dutch Audio Classics](http://dutchaudioclassics.nl). For example, they have some pictures of an early prototype based on the FC-567 twin analog cassette deck, and (at the other end of the history of DCC) pictures of a double-deck analog cassette recorder / DCC recorder which was never released. Well worth visting.
 
