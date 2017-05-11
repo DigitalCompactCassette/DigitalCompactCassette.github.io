@@ -1,4 +1,4 @@
-# [Documentation](..)/[Reverse Engineering](.)
+# [Home](../..)/[Documentation](..)/[Reverse Engineering](.)
 
 In 1997, Waling Tiersma did a bit of work reverse-engineering the software that was available for the DCC-175 with PC-link cable. He got as far as writing a program that could wake up the recorder and start playback from the DOS command line.
 
