@@ -1,4 +1,4 @@
-# [Documentation](..)/[Service Manuals](.)
+# [Home](../..)/[Documentation](..)/[Service Manuals](.)
 This directory contains a number of service manuals for various DCC recorders and players of various brands. Most of the service manuals were downloaded from the Internet.
 
 ## [DCC175/DCC170 Service Manual](./DCC170%20DCC175%20Service%20Manual.zip)
