@@ -44,7 +44,7 @@ The TDA1309H is a stereo Analog to Digital and Digital to Analog Converter (ADC/
 ## [TDA1315 Digital Audio Input/Output (DAIO)](./TDA1315H.pdf)
 The TDA1315H is the Digital Audio Input Output Circuit (DAIO) that converts the IEC958 (S/PDIF) signal from a coax or optical input to I2S (Inter-IC Sound) bit stream, and back. It also encodes and decodes SCMS bits in the IEC958 stream.
 
-## [TDA1318 Read Amplifier (9 heads)](./RDA1318.pdf)
+## [TDA1318 Read Amplifier (9 heads)](./TDA1318.pdf)
 The TDA1318H is a read amplifier that amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signals for further processing. It needs external signals to control the multiplexing. This read amplifier has 9 inputs and is intended for stationary recorders.
 
 ## [TDA1319 Write Amplifier (9 heads)](./TDA1319.pdf)
