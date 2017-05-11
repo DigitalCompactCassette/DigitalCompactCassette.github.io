@@ -1,4 +1,4 @@
-# [Documentation](..)/[General](.)
+# [Home](../..)/[Documentation](..)/[General](.)
 This directory contains general information about the DCC format. These documents were found on the World Wide Web.
 
 ## [Digital Compact Cassette (DCC) - Matsushita and Philips Develop New Standard](./Digital%20Compact%20Cassette%20(DCC)%20-%20Matsushita%20and%20Philips%20Develop%20New%20Standard.pdf)
