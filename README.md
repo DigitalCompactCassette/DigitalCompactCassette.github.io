@@ -10,6 +10,12 @@ The information here focuses somewhat on (arguably) the most important DCC recor
 
 Nevertheless, any text that was recorded on "Super User Tapes" (with a second-generation recorder or with DCC-Studio) could not be read and/or shown on the display of first generation recorders (including the DCC-175, ironically). There was never any hardware or software available for DCC owners to create a tape that had the same information as a prerecorded tape, i.e. song titles of all songs (not just the currently playing song) and time codes of all songs (so that the recorder could determine which way to wind/rewind to find the start of a specific song title). This repository may or may not be the start of a new project to reverse-engineer the prerecorded format, and reproduce it using either the PC-Link cable or using a hacked DCC recorder, and possibly a microcontroller and some extra hardware.
 
+## [Documentation subfolder](./Documentation)
+The documentation folder contains a number of documents that were gathered from the internet. As far as we can tell, this information is public domain.
+
+## [Software subfolder](./Software)
+The Software folder contains software that was made available to DCC recorders, and possibly other useful software that was created based on reverse-engineered information.
+
 ## References
 The DCC-FAQ is currently located at (http://xs4all.goudsm.it/dcc-faq.html). It hasn't been really maintained since 1997 and though there is interesting information in there, it's definitely outdated and probably incomplete. A better source of generic information about DCC is the [English Wikipedia page](https://en.wikipedia.org/wiki/Digital_Compact_Cassette) which I also mostly wrote, and maintain on a somewhat regular basis (I go there a few times a year and check the latest edits to make sure nothing bad sneaks in).
 

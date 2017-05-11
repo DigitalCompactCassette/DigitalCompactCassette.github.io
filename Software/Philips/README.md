@@ -1,4 +1,4 @@
-# Philips Software
+# [Home](../..)/[Software](..)/[Philips](.)
 This software was distributed to owners of the DCC-175 recorder. Koninklijke Philips N.V. owns the rights to this software, but we post it here without permission because of Fair Use considerations.
 
 Fair Use under the Digital Millennium Copyright Act (DMCA) depends on the Four Factors:
