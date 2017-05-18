@@ -50,7 +50,7 @@ The TDA1318H is a read amplifier that amplifies and filters the signals from the
 ## [TDA1319 Write Amplifier (9 heads)](./TDA1319.pdf)
 The TDA1319T is a write amplifier that's connected to the DCC recording heads. It demultiplexes the formatted digital stream with modulated data uses it to control the current through the nine recording coils in the head.
 
-## [RDA1380 Read Amplifier (18 heads)](./TDA1380.pdf)
+## [TDA1380 Read Amplifier (18 heads)](./TDA1380.pdf)
 The TDA1380 is a read amplifier that amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signal for further processing. It needs external signals to control the multiplexing. As you may know, portable players have heads that are different from stationary players: portable heads have 18 MR channels whereas stationary recorders have a 9-channel head that gets rotated around for side B. This read amplifier has 18 inputs (9 for each side) and is intended for portable recorders.
 
 ## [TDA1381 Write Amplifier (18 heads)](./TDA1381.pdf)
