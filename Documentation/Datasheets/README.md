@@ -38,7 +38,7 @@ The SAA7366T is a stereo Analog to Digital Converter (ADC) that generates an 18 
 ## [TDA1305 Digital Analog Converter (DAC)](./TDA1305T.pdf)
 The TDA1305T is a stereo Digital to Analog Converter (DAC)
 
-## [TDA1309 Analog / Digital / Analog Converter (ADDA)](./TDA1309H.pdf)
+## [TDA1309 Analog / Digital / Analog Converter (ADC/DAC)](./TDA1309H.pdf)
 The TDA1309H is a stereo Analog to Digital and Digital to Analog Converter (ADC/DAC).
 
 ## [TDA1315 Digital Audio Input/Output (DAIO)](./TDA1315H.pdf)
