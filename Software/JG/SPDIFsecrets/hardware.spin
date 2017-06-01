@@ -12,7 +12,7 @@ CON
 
   pin_SPDIN                     ' SPDIF in
   pin_SPDDEL                    ' SPDIF delayed and inverted
-  pin_SPDDEL2                   ' SPDIF double delayed
+  pin_3
   pin_XORIN                     ' XORed SPDIF input (SPDIN == SPDDEL)
   
   pin_4                         
@@ -32,7 +32,7 @@ CON
 
   pin_RECCLK                    ' Recovered clock
   pin_PRADET                    ' Preamble Detect
-  pin_DEBUG                     ' Debug                        
+  pin_18                        
   pin_19
 
   pin_20
@@ -42,27 +42,33 @@ CON
 
   pin_24
   pin_25
-  pin_26
-  pin_27
+  pin_LED26                     ' LED on the Parallax FLiP
+  pin_LED27                     ' LED on the Parallax FLiP
   
-  pin_28                                      
-  pin_29
-  pin_30
-  pin_31
+  pin_SCL                       ' I2C clock                                      
+  pin_SDA                       ' I2C data
+  pin_TX                        ' Serial transmit                        
+  pin_RX                        ' Serial receive
 
+  ' Bitmasks for each of the pins
   mask_SPDIN  = |< pin_SPDIN
   mask_SPDDEL = |< pin_SPDDEL
   mask_XORIN  = |< pin_XORIN
   mask_RECCLK = |< pin_RECCLK
   mask_PRADET = |< pin_PRADET
-  mask_DEBUG  = |< pin_DEBUG
+  mask_LED26  = |< pin_LED26
+  mask_LED27  = |< pin_LED27
 
+  ' Use pin 26 as debug output
+  pin_DEBUG = pin_LED26
+  mask_DEBUG = mask_LED26  
   
 PUB dummy
 {{ The module won't compile with at least one public function }}
 
 CON     
 ''***************************************************************************
+''* MIT LICENSE
 ''*
 ''* Permission is hereby granted, free of charge, to any person obtaining a
 ''* copy of this software and associated documentation files (the

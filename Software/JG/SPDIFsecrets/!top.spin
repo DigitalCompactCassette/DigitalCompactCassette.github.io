@@ -1,3 +1,11 @@
+''***************************************************************************
+''* S/PDIF Analyzer for Propeller
+''* Copyright (C) 2017 Jac Goudsmit
+''*
+''* TERMS OF USE: MIT License. See bottom of file.                                                            
+''***************************************************************************
+''
+
 CON
 
   _clkmode = xtal1 + pll16x
@@ -5,28 +13,28 @@ CON
 
 OBJ
 
+  hw:           "hardware"
+  biphase:      "biphasedec"
   ser:          "FullDuplexSerial"
-  biphase:      "BiphaseDec"
 
 PUB main
 
   biphase.biphasedec
   
-  ser.Start(31, 30, %0000, 115200)                      'requires 1 cog for operation
+  ser.Start(hw#pin_RX, hw#pin_TX, %0000, 115200)        'requires 1 cog for operation
 
   waitcnt(cnt + (1 * clkfreq))                          'wait 1 second for the serial object to start
   
-  ser.Str(STRING("Testing the FullDuplexSerial object."))     'print a test string
-  ser.Tx($0D)                                                 'print a new line
+  ser.Str(STRING("Hello, World!"))                      'print a test string
+  ser.Tx($0D)                                           'print a new line
   
-  ser.Str(STRING("All Done!"))
-
   waitcnt(cnt + (1 * clkfreq))                          'wait 1 second for the serial object to finish printing
   
   ser.Stop                                              'Stop the object
 
 CON     
 ''***************************************************************************
+''* MIT LICENSE
 ''*
 ''* Permission is hereby granted, free of charge, to any person obtaining a
 ''* copy of this software and associated documentation files (the

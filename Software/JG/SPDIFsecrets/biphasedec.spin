@@ -83,22 +83,14 @@ DAT
    inverter B. It's pretty jittery so the code should only depend on the
    positive edges of XORIN.
 
-   The durations of the low periods of P3 determine how the data should be
-   interpreted. This low period depends on the frequency of the input signal
-   and on the bits that are encoded in it.
-
-   Nevertheless, because of inaccuracies in the components, and other
-   real-time variations, the best way to recover the clock is to disregard
-   the negative edge of P3, and only measure the time between positive
-   edges.             
-                      
-   At 48kHz and when using stereo,the minimum time between two biphase level
-   changes is 162.7ns: 48000 samples per second times 2 channels times 32
-   bits times 2 results in 1/(48000*2*32*2) = 162.7 approximately. This
-   corresponds to just over 13 Propeller clock cycles of 12.5ns each at
-   80MHz.
-
-           
+   At 48kHz and when using stereo (i.e. two subframes per frame), there are
+   3,072,000 bits of data per second, so each bit takes about 325ns to
+   transfer. When the Propeller clock runs at 80MHz, so each Propeller clock
+   cycle is 12.5ns. Most Propeller instructions are 4 cycles (50ns) so
+   each bit has to be processed in about 6 instructions. Running the
+   Propeller at a faster speed or processing a slower SPDIF stream can be
+   done without changing the code. 
+         
 }}
 
                         org     0
@@ -192,6 +184,7 @@ bmfrqaval               long    1
                         
 CON     
 ''***************************************************************************
+''* MIT LICENSE
 ''*
 ''* Permission is hereby granted, free of charge, to any person obtaining a
 ''* copy of this software and associated documentation files (the
