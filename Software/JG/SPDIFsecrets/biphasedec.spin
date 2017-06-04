@@ -8,7 +8,7 @@
 
 CON
   con_RECCLK_DELAY = 9          ' Phase delay of RECCLK. 9
-  con_PRADET_DELAY = 30         ' Number of Prop clocks in a preamble
+  con_PRADET_DELAY = 31         ' Number of Prop clocks in a preamble
 
 OBJ
   hw:           "hardware"      ' Pin assignments and other global constants
@@ -21,8 +21,6 @@ PUB biphasedec
   
 DAT
 {{
-   This cog recovers the clock from the XOR'ed input.
-
    Schematic:
 
 
@@ -85,11 +83,14 @@ DAT
 
    At 48kHz and when using stereo (i.e. two subframes per frame), there are
    3,072,000 bits of data per second, so each bit takes about 325ns to
-   transfer. When the Propeller clock runs at 80MHz, so each Propeller clock
-   cycle is 12.5ns. Most Propeller instructions are 4 cycles (50ns) so
-   each bit has to be processed in about 6 instructions. Running the
-   Propeller at a faster speed or processing a slower SPDIF stream can be
-   done without changing the code. 
+   transfer. When the Propeller clock runs at 80MHz, each Propeller clock
+   cycle is 12.5ns. Most Propeller instructions are 4 cycles (so 50ns) so
+   each bit has to be processed in about 6 instructions. The code sort of
+   depends on this: it expects that by the time the next WAITPxx comes
+   around, any secondary polarity change for a "1" bit has already happened.
+   Conversely, if the bit rate is so fast that a "0" bit takes shorter
+   than the time that one loop needs to measure a bit, the software will
+   also get out of sync.
          
 }}
 
@@ -102,47 +103,56 @@ decodebiphase
                         ' Set up timer A, used for recovering clock
                         mov     ctra, ctraval
                         mov     frqa, frqaval
+                        mov     phsa, reseta
 
                         ' Set up timer B, used for preamble detection
                         mov     ctrb, ctrbval
                         mov     frqb, frqbval
+                        mov     phsb, resetb
 
-loop1
+evenloop
                         waitpne zero, mask_XORIN        ' Flank detected
-                        mov     phsa, reseta            ' Make RECCLK low for half a bit time                        
                         mov     phsb, resetb
-                        ' By now, XORIN should be 0 (pulse width must be < 150ns)
-                        waitpeq zero, mask_RECCLK       ' Wait for center of bit; RECCLK goes high
+                        
+                        test    one, phsa wc            ' C=1 if odd number of total flanks
+
                         nop
-                        nop
-                        ' Second pulse on XORIN should be gone now
-                        waitpne zero, mask_XORIN        ' Wait for next bit
-                        mov     phsa, reseta2           ' Make RECCLK high for half a bit time
+                                                
+                        muxnc   outa, mask_DEBUG        ' We started even, so odd=0
+                        
+              if_nc     jmp     #evenloop               ' Go to even loop if total still even
+              
+oddloop
+                        waitpne zero, mask_XORIN        ' Flank detected
                         mov     phsb, resetb
-                        '
-                        waitpne zero, mask_RECCLK       ' Wait for center of bit; RECCLK goes low
-                        nop'xor     outa, mask_PRADET
-                        jmp     #loop1
+                        
+                        test    one, phsa wc            ' C=1 if odd number of total flanks
+
+                        muxc    outa, mask_DEBUG        ' We started odd, so odd=1
+              if_nc     jmp     #evenloop
+                        jmp     #oddloop                                  
 
                         
                                                                           
                         
-ctraval                 long    (%00100 << 26) | hw#pin_RECCLK
+ctraval                 long    (%01010 << 26) | hw#pin_XORIN ' Count pos. edges on XORIN                   
 frqaval                 long    1
-reseta                  long    $8000_0000 - con_RECCLK_DELAY
-reseta2                 long    - con_RECCLK_DELAY
+reseta                  long    0
 
 ctrbval                 long    (%00100 << 26) | hw#pin_PRADET
 frqbval                 long    1
 resetb                  long    - con_PRADET_DELAY
 
 zero                    long    0
-v8000_0000              long    $8000_0000
+one                     long    1
 
-outputmask              long    hw#mask_RECCLK | hw#mask_PRADET {| hw#mask_DEBUG}
+data                    long    0
+
+outputmask              long    hw#mask_RECCLK | hw#mask_PRADET | hw#mask_DEBUG
 mask_XORIN              long    hw#mask_XORIN
 mask_RECCLK             long    hw#mask_RECCLK
 mask_PRADET             long    hw#mask_PRADET
+mask_DEBUG              long    hw#mask_DEBUG
 
 
 DAT
