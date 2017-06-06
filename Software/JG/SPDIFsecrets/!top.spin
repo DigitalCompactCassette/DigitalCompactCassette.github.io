@@ -19,7 +19,7 @@ OBJ
 
 PUB main
 
-  biphase.biphasedec
+  biphase.biphasedec(39)                        
   
   ser.Start(hw#pin_RX, hw#pin_TX, %0000, 115200)        'requires 1 cog for operation
 

@@ -10,8 +10,8 @@ CON
 
   #0
 
-  pin_SPDIN                     ' SPDIF in
-  pin_SPDDEL                    ' SPDIF delayed and inverted
+  pin_1
+  pin_2
   pin_3
   pin_XORIN                     ' XORed SPDIF input (SPDIN == SPDDEL)
   
@@ -30,10 +30,10 @@ CON
   pin_14
   pin_15
 
-  pin_RECCLK                    ' Recovered clock
+  pin_BINDAT                    ' Recovered binary data
   pin_PRADET                    ' Preamble Detect
-  pin_18                        
-  pin_19
+  pin_BLKDET                    ' Beginning of block Detect                                                
+  pin_RCHAN                     ' Right channel
 
   pin_20
   pin_21
@@ -51,11 +51,11 @@ CON
   pin_RX                        ' Serial receive
 
   ' Bitmasks for each of the pins
-  mask_SPDIN  = |< pin_SPDIN
-  mask_SPDDEL = |< pin_SPDDEL
   mask_XORIN  = |< pin_XORIN
-  mask_RECCLK = |< pin_RECCLK
+  mask_BINDAT = |< pin_BINDAT
   mask_PRADET = |< pin_PRADET
+  mask_BLKDET = |< pin_BLKDET
+  mask_RCHAN  = |< pin_RCHAN
   mask_LED26  = |< pin_LED26
   mask_LED27  = |< pin_LED27
 
