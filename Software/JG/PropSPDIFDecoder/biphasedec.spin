@@ -65,7 +65,7 @@ A out    |   0   |   0   |   1   |   0   |   1   |     P     |   1   |
          --+       +-------+   +---+       +---+   +-----------+   +---+
 B out      |   0   |   0   |   1   |   0   |   1   |     P     |   1   |
            +-------+       +---+   +-------+   +---+           +---+   +
-            
+                                                   
          +-+     +-+     +-+ +-+ +-+     +-+ +-+ +-+         +-+ +-+ +-+
 XORIN    | |     | |     | | | | | |     | | | | | |         | | | | | |
          + +-----+ +-----+ +-+ +-+ +-----+ +-+ +-+ +---------+ +-+ +-+ +
@@ -127,18 +127,15 @@ input signal.
 The next step is to extract the data from the input stream. To do this,
 we program a timer to count positive edges on the XORIN input. Whenever
 execution passes a WAITPxx instruction, we know that we're at the beginning
-of a new encoded bit. Since the beginning of the previous bit, edge counter
-should have been increased with either a value of one (if the S/PDIF input
-only changed once, for a "0" bit), or two (if the S/PDIF input changed
-twice, for a "1" bit). The most efficient way to do this is to test whether
-the edge counter's value is odd or even, and whether the "oddness" changed
-since the beginning of the last bit. If the last count was odd and the
-count changed to even during the time of one bit, there must have been only
-one transition so the incoming bit was 0. The same is true when the count
-changes from even to odd. If the count was odd and stayed odd, or if the
-count was even and stayed even, we know that we must have gotten a 1 bit.
-The next diagram illustrates this too: As you can see, the oddness changes
-when there is a 0-bit, but stays the same when there is a 1-bit.
+of a new bit in the stream. At that point, all the code needs to know to
+decode the bit is:
+* Is the edge counter odd or even now?
+* Was the edge counter odd at the beginning of the previous bit?
+
+If the oddness of the counter changed from odd to even or from even to
+odd, there must have been only one flank in the signal, so the encoded bit
+must have been a 0. If the oddness stayed the same (even to even, or odd
+to odd), it means the encoded bit must have been a 1.
 
          +-+     +-+     +-+ +-+ +-+     +-+ +-+ +-+         +-+ +-+ +-+
 XORIN    | |     | |     | | | | | |     | | | | | |         | | | | | |
@@ -147,71 +144,160 @@ XORIN    | |     | |     | | | | | |     | | | | | |         | | | | | |
 Propeller PPPPPW  PPPPPW  PPPPPW  PPPPPW  PPPPPW  PPPPPW      PPPPPW  PP
  
 PHSx      1       2       3   4   5       6   7   8           9   10  11
+
+Oddness   ^ odd   ^ even  ^ odd   ^ odd   ^ even  ^ even      ^ odd
                
 This method is amazingly reliable and very jitter-proof. It's much easier
-and reliable to count edges than it would be to sample the input to see
-if a second pulse arrived in the middle of a bit. The fact that we
-only have to check for even or odd numbers (and that there are always an
-even number of edges in each subframe, because the parity is always even),  
-also makes it unnecessary to reset the edge counter, so there is no race
-condition between the reset and a flank that comes in right about the same
-time. 
+and reliable to let a timer count edges (while the code does an exactly
+predictable amount of work to make sure that it samples the timer count at
+the exact right times) than it would be to write code to sample the input
+to see if a second pulse arrived in the middle of a bit.
+
+Another advantage of this method is that it's not necessary to reset the
+timer/counter at the beginning of each bit. We only need to keep track of
+whether the oddness changed between two bit times,
+
+We also don't need to reset the counter at any other time. In the event
+that the code starts at the wrong time and executes a WAITPxx when the
+SECOND pulse of a 1-bit comes in, it will straighten itself out very
+quickly (during the first 0-bit). Then when the code encounters a
+preamble, it will of course post the wrong data but the next subframe will
+be decoded correctly.
+
+         +-+     +-+     +-+ +-+ +-+     +-+ +-+ +-+         +-+ +-+ +-+
+XORIN    | |     | |     | | | | | |     | | | | | |         | | | | | |
+         + +-----+ +-----+ +-+ +-+ +-----+ +-+ +-+ +---------+ +-+ +-+ +
+
+Propeller             PPPPPW  PPPPPW      PPPPPW  PPPPPW      PPPPPW  PP
+                      ^start  ^outofsync  ^back in sync!
 
 So now we have an easy way to recover the bit clock (just execute a WAITPxx
 followed by 5 instructions) and we have binary data from the input stream.
 The next step is to figure out where one subframe ends and the next one
-begins. This needs to go in a separate cog because the biphase decoder
-cog is just about as busy as it can be.
+begins. This needs to go in a separate cog because by now, the biphase
+decoder cog is just about as busy as it can be.
 
 Each subframe starts with a preamble which deliberately violates the
 biphase encoding. There are three kinds of preambles:
 
-* B-Preamble: 3t + 1t + 1t + 3t (11101000 or 00010111): This starts a block
-  of 192 frames (384 subframes). These are needed to decode the subchannel
-  data. This block is always for the left channel.
-* M-Preamble: 3t + 3t + 1t + 1t (11100010 or 00011101): This starts a
-  subframe for the left channel that's not the first subframe of a block.
-* W-Preamble: 3t + 2t + 1t + 2t (11100100 or 00011011): This starts a
-  subframe for the right channel.
+             +-----------+   +---+           +---
+B-Preamble:  |           |   |   |           |
+(S/PDIF)    -+           +---+   +-----------+
+
+            -+           +---+   +-----------+
+or:          |           |   |   |           |
+             +-----------+   +---+           +---
+
+             +-+         +-+ +-+ +-+         +-+
+XORIN:       | |         | | | | | |         | |
+            -+ +---------+ +-+ +-+ +---------+ +-         
+
+
+
+
+             +-----------+           +---+   +---
+M-Preamble:  |           |           |   |   |
+(S/PDIF)    -+           +-----------+   +---+
+
+            -+           +-----------+   +---+
+or:          |           |           |   |   |
+             +-----------+           +---+   +---
+
+             +-+         +-+         +-+ +-+ +-+
+XORIN:       | |         | |         | | | | | |
+            -+ +---------+ +---------+ +-+ +-+ +-         
+
+
+
+
+             +-----------+       +---+       +---
+W-Preamble:  |           |       |   |       |
+(S/PDIF)    -+           +-------+   +-------+
+
+            -+           +-------+   +-------+
+or:          |           |       |   |       |
+             +-----------+       +---+       +---
+
+             +-+         +-+     +-+ +-+     +-+
+XORIN:       | |         | |     | | | |     | |
+            -+ +---------+ +-----+ +-+ +-----+ +-         
+
+
+
+
+                        +-----------------+-+
+PRADET:                 |                 | |
+            ------------+                 +-+----
+
+Preamble cog
+events (see             ^A       ^B  ^C   ^D^E
+below)
+            
+
+* The B-Preamble starts a block of 192 frames (384 subframes). These are
+  needed to decode the subchannel data. The first subframe in a block is
+  always for the left channel.
+* The M-Preamble indicates the start of a subframe for the left channel
+  that's not at the beginning of a block.
+* The W-Preamble indicates the start of a subframe for the right channel.
 
 The preamble detector uses two timers: One timer counts positive edges on
-the XORIN input, and the other is a Numerically Controlled Oscillator. We
-configure the NCO with a FRQx of 1, so it basically counts Propeller clock
-cycles from the time we reset it. The Most Significant Bit (msb) of the
-counter is connected to an output pin, in this case the PRADET pin (which
-stands for PReAmble DETect).
+the XORIN input (just like the biphase bit decoder cog), and the other is
+set up as a Numerically Controlled Oscillator (NCO). We configure the NCO
+so that it basically counts Propeller clock cycles from the time we reset
+it, The most significant bit (msb) of the NCO counter is connected to the
+PRADET (PReAmble DETect) output pin. That pin is used by other cogs to
+synchronize to the beginning of a subframe.
 
 The main loop of the preamble detector cog keeps waiting for an incoming
 pulse on XORIN (with the usual 5 instructions plus WAITPxx so it doesn't
 wait for extra pulses for 1-bits). As soon as execution continues after
 the WAITPxx, it stores the current flank count and adds 2 to it (we'll
-get back to that in a minute). Then it checks if the PRADET pin is high,
-indicating that this was the end of a preamble's first pulse which is
-always 3t. If this was not the end of a preamble's first pulse, the
-preamble detector cog resets the NCO and waits for the next pulse that
-occurs between two bits.
+get back to that in a minute). Then it checks PRADET and resets the NCO.
 
-When a 3t pulse (or longer) is detected, the preamble detector doesn't
-reset the timer (so the PRADET output stays HIGH for a while), but it
-falls out of the loop at the time where it would normally jump back.
-Then it waits for the following flank, but because this is (again) 5
-instructions and a WAITPxx later than the previous WAITPxx, it can
-determine what kind of preamble is coming in:
-* If the flank counter is now two counts higher than just after the
-  previous WAITPxx, it means that two 1t pulses came in so this must
-  be a B-preamble (3t + _1t + 1t_ + 3t). Otherwise it must be an M or W
-  preamble.
-* The NCO count is now compared to a fixed value which pretty much means
-  that the elapsed time since the first reset (at the beginning of the
-  first 3t period is now more than 5t. If it is higher, the period
-  between the last two WAITPxx must have been 3t and this must be an M
-  preamble (3t + _3t_ + 1t + 1t). If not (and the elapsed time is shorter)
-  this must be a W preamble (3t + _2t_ + 1t + 2t).
+So when there is no preamble on the input, the NCO keeps getting reset,
+and the PRADET stays low. But when the first long pulse of a preamble
+comes in (event ^A) in the diagram above), the preamble detector doesn't
+reset the counter and falls through to the second part of the decoding.
 
-The BLKDET output is updated depending on whether this was a B block, and
-the RCHAN output is updated depending on whether this was a W block. Then
-the cog jumps back to the main loop again.
+The code executes exactly 5 instructions plus a WAITPxx. That brings the
+time to point ^B for preambles B or W, or to point ^C for an M preamble:
+after all, it waits a minimum of 2*t but after that, the WAITPxx
+instruction continues on the next pulse.
 
+After the WAITPxx, the code is at event ^D (for a B or M preamble) or at
+event ^E (for a W preamble). Just like during normal bits, it stores the
+NCO timer value and resets the NCO so that PRADET goes low. So this may
+happen at two different times depending on the preamble type, but it
+always happens just before the pulse that indicates the end of the
+preamble and the start of the first significant data bit. The biphase
+decoder waits for this to synchronize with the data bits in the next
+subframe.
+
+So now, the preamble decoder needs to know two things to recognize which
+preamble is coming in:
+* How many pulses have come in? If there were 2 pulses during a minimum
+  of the 2*t duration, we know the preamble must be a B preamble. As I
+  mentioned, the code stores the previous count plus 2, so that at this
+  point, it can just compare the stored number with the actual count.
+* How much time elapsed between the last reset of the NCO and just after
+  the last WAITPxx inside the preamble? The previous NCO reset happened
+  at the beginning of the preamble when we didn't know that it was a
+  preamble yet. If the elapsed time since then is more than 5*t, this
+  must mean that an M preamble is coming in because it has a single long
+  pulse in the middle. Otherwise it must be a B or W preamble because
+  they have a pulse that comes in 1*t earlier.
+
+The code combines those two things, and sets the BLKDET (BLocK DETect)
+output pin high or low depending on whether this is a B preamble. It
+also sets the RCHAN (Right CHANnel) output high if this is a W preamble,
+and low if it isn't.
+
+There's a little bit of extra processing involved in deciding whether to
+set the BLKDET and RCHAN outputs high or low, but that's okay. Any cog
+that wants to know what kind of subframe this is, won't need to know it
+until the end of the subframe when the next preamble is detected.
+  
 Another cog can recover the data from the S/PDIF input by doing the
 following:
 1. Wait for XORIN to go high
@@ -227,13 +313,20 @@ following:
 The time available for steps 4 to 6 (inclusive) is 4t (651.2ns worst case
 at 48kHz). The worst-case timing for a WRLONG is 23 cycles (287.5ns) so if
 you want to write the data to the hub, you have 463.7ns (about 9
-instructions) to get it done. I may implement this in the Biphase cog in
-the future. 
+instructions) left over for other processing. I may implement this in the
+Biphase cog in the future. 
 
 (*) I just realized that 48kHz may be a little too fast for the current
 code: the time-critical loops consist of 5 regular instructions (4 clocks)
-plus one WAITPxx instruction (minimum 6 clocks each) which is exactly the
-minimum time that's available. 
+plus one WAITPxx instruction (minimum 6 clocks each) which is only 0.5ns
+less than 2*t at 48kHz. I would have liked at least one clock cycle
+(12.5ns) to spare but oh well. It's fairly easy to overclock a Propeller
+and fix the problem, you'd just have to modify the timing constant for
+the preamble detection. I may unroll the loops to make the code execute
+faster so 48kHz will work with the common Propeller configuration, but
+unrolling the loops (i.e. copy-pasting the instructions and removing the
+JMP insturctions) makes editing a pain, so I won't do that at least until
+I feel that I've gotten everything there is to get from the current code.
          
 }}
 
@@ -342,24 +435,33 @@ dploop
                         waitpne dpzero, dpmask_XORIN
                         cmp     dpcount, phsa wz        ' Z=1 C=0 for B preamble, Z=0 M or W preamble
                         cmp     dpdetectm, phsb wc      ' C=1 for M preamble, C=0 B or W preamble
-                        mov     phsb, dpresetb2         ' Reset Timer B at exact same time as usual
+                        mov     phsb, #0                ' Reset Timer B at exact same time as usual
+                                                        ' ... but reset it to 0 so compensate for longer
+                                                        '     time spent in the next few instructions
+                                                        
               if_z      cmp     dpzero, #1 wc           ' Set C if Z=1
 
                         ' At this point:
-                        ' * B-preamble signified by Z=1 C=1
-                        ' * M-preamble signified by Z=0 C=1
-                        ' * W-preamble signified by Z=0 C=0
-                        ' Also:
-                        ' * Left  channel signified by C=1
-                        ' * Right channel signified by C=0
-                        '
+                        ' * Z=1 indicates B preamble
+                        ' * C=0 indicates W preamble
+                        ' * C=1 and Z=0 indicate M preamble
+                        
                         ' Set the channel block detect and channel outputs.
-                        ' This happens pretty late into the subframe, but these signals
-                        ' won't be needed until we're ready to process the data from
-                        ' the current frame anyway
+                        ' This happens while the mew subframe is already on its way,
+                        ' but these signals won't be needed by other cogs until
+                        ' they get to the end of the current subframe anyway.
                         muxz    outa, dpmask_BLKDET                                              
                         muxnc   outa, dpmask_RCHAN
 
+                        ' NOTE: This would be a good time to read an updated value
+                        ' of the timing constant from the hub (to make it possible to
+                        ' run some sort of smart code that statistically determines what
+                        ' it should be or to let the user influence it manually),
+                        ' but if we replace it with the wrong value, we may never
+                        ' get back here. I'll have to think about how to solve this
+                        ' and also about how to detect when the input goes dead, which
+                        ' gets everyone stuck in WAITPxx instructions.
+                        
                         ' NOTE: we end this loop late. That's fine; there won't be another
                         ' preamble any time soon and timer B won't expire because we set
                         ' PHSB to a special value.
@@ -373,7 +475,6 @@ dpreseta                long    0
 dpctrbval               long    (%00100 << 26) | hw#pin_PRADET
 dpfrqbval               long    1
 dpresetb                long    $8000_0000 + 8          ' Subtract 3*t cycles from this. "+8" compensates for resetting 2 instructions late
-dpresetb2               long    0                       
 
 dpcount                 long    0
 
