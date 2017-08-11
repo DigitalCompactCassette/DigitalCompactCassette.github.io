@@ -61,7 +61,7 @@ The first DCC recorder
 
 (First generation)
 
-## [Philips DCC-951](./philips_dcc951.pdf) and [addendum: Circuit Description](./philips_dcc051_circuit_description.pdf)
+## [Philips DCC-951](./philips_dcc951.pdf) and [addendum: Circuit Description](./philips_dcc951_circuit_description.pdf)
 18 bit DCC recorder with support for super-user tapes. Had a Turbo Drive mechanism for fast wind/rewind. Virtually identical to the DCC730 but it had some extra connections for the 900-series remote control bus, and it had a dot-matrix display.
 
 The circuit description document is an addendum to the DCC-951 service manual, but is mostly about the DCC Deck Unit (DDU-2113) that was used in the DCC-951 and DCC-730. The document makes it clear without a doubt that by 1993, Philips was trying hard to make the Turbo Drive mechanism with the 3rd generation chipset a standard in the world. This document, intended for service technicians and service trainers, plus the datasheets for the third-generation chipset, are a great source of information about the DCC standard and how a DCC recorder works. Definitely worth a read!
