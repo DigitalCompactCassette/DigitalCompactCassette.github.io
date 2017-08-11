@@ -26,7 +26,7 @@ This was the first portable DCC player (it couldn't record). Developed by Matsus
 
 (Third generation)
 
-## [Philips DCC175/DCC170 Service Manual](./DCC170%20DCC175%20Service%20Manual.zip)
+## [Philips DCC175/DCC170](./DCC170%20DCC175%20Service%20Manual.zip)
 The DCC175 was an 18 bit portable DCC recorder developed by Marantz. No support for track/title display for super-user tapes, but it can be connected to a computer using the PC-link cable. The mechanism is identical to the DCC170 and there are commonalities in the schematics between the DCC170 and DCC175 too, but it's not possible to hack the DCC170 to make it into a DCC175: the PCB designs are very different.
    
 The DCC175 service manual consisted of the DCC170 manual with a few dozen pages describing the differences between the DCC175 and the DCC170. Waling Tiersma provided a paper copy of the service manual, and Jac Goudsmit scanned it at the highest resolution that his dad's scanner supported: 300dpi.
@@ -61,17 +61,19 @@ The first DCC recorder
 
 (First generation)
 
-## [Philips DCC-951](./philips_dcc951.pdf)
+## [Philips DCC-951](./philips_dcc951.pdf) [addendum: Circuit Description](./philips_dcc051_circuit_description.pdf)
 18 bit DCC recorder with support for super-user tapes. Had a Turbo Drive mechanism for fast wind/rewind. Virtually identical to the DCC730 but it had some extra connections for the 900-series remote control bus, and it had a dot-matrix display.
 
-(Third generation)
-
-## [Technics RC-DC8](./technics_rc-dc8.pdf)
-Stationary DCC recorder developed by Matsushita. Lots of extra information in this service manual; worth reading if you're new to DCC.
+The circuit description document is an addendum to the DCC-951 service manual, but is mostly about the DCC Deck Unit (DDU-2113) that was used in the DCC-951 and DCC-730. The document makes it clear without a doubt that by 1993, Philips was trying hard to make the Turbo Drive mechanism with the 3rd generation chipset a standard in the world. This document, intended for service technicians and service trainers, plus the datasheets for the third-generation chipset, are a great source of information about the DCC standard and how a DCC recorder works. Definitely worth a read!
 
 (Third generation)
 
-## [Technics RC-DC10](./technics_rs-dc10.pdf)
-Stationary DCC recorder developed by Matsushita. Lots of extra information in this service manual; worth reading if you're new to DCC.
+## [Technics RS-DC8](./technics_rs-dc8.pdf)
+Stationary DCC recorder developed by Matsushita, using their own chipset. This recorder has many features such as the ability to store 4 texts with each track. The schematic hints at the possibility that Matsushita may have been working on a longplay DCC format at the time of the demise of DCC. Lots of extra information in this service manual; worth reading if you're new to DCC. 
+
+(Third generation)
+
+## [Technics RS-DC10](./technics_rs-dc10.pdf)
+Stationary DCC recorder, virtually identical to the Philips DCC-900. Lots of extra information in this service manual; worth reading if you're new to DCC.
 
 (First generation)
