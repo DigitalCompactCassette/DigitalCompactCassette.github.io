@@ -1,7 +1,7 @@
 # [Home](../..)/[Documentation](..)/[Datasheets](.)
 This directory contains datasheets for a number of DCC-related chips by Philips. These were all found on the Internet.
 
-Various documentation about DCC from reliable sources such as Philips, mention that there were three generations of DCC recorders and chipsets. The only generation of chips that was really well documented (and for which datasheets are available online) is the third generation. The [DCC-951 Circuit Description](../Service Manuals/philips_dcc051_circuit_description.pdf) gives a good overview of how these IC's work together.
+Various documentation about DCC from reliable sources such as Philips, mention that there were three generations of DCC recorders and chipsets. The only generation of chips that was really well documented (and for which datasheets are available online) is the third generation. The [DCC-951 Circuit Description](../Service%20Manuals/philips_dcc051_circuit_description.pdf) gives a good overview of how these IC's work together.
 
 To play a DCC tape, the player needs to:
 
