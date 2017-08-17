@@ -32,8 +32,14 @@ The SAA2023 is the Drive Processor (DRP) which is used in the DCC730 and DCC951,
 ## [SAA3323 Drive Processor (DRP)](./SAA3323.pdf)
 The SAA3323 is also a DRP, and it performs the same functions as the SAA2023, but it takes a 3.3V power supply instead of 5V, so it's used in the DCC134, DCC170 and DCC175 portable players and recorders.
 
+## [SAA7350 Digital Analog Converter (DAC)](./SAA7350.pdf)
+The SAA7350 is a stereo Digital to Analog Converter (DAC). It can work together together with the TDA1547 to generate an even better analog signal.
+
 ## [SAA7366 Analog Digital Converter (ADC)](./SAA7366T.pdf)
 The SAA7366T is a stereo Analog to Digital Converter (ADC) that generates an 18 bit digital PCM data stream.
+
+## [SM5840 Digital Filter](./SM5840FS.pdf)
+The SM5840 is an 8-times oversampling digital filter for digital audio.
 
 ## [TDA1305 Digital Analog Converter (DAC)](./TDA1305T.pdf)
 The TDA1305T is a stereo Digital to Analog Converter (DAC)
@@ -55,3 +61,6 @@ The TDA1380 is a read amplifier that amplifies and filters the signals from the 
 
 ## [TDA1381 Write Amplifier (18 heads)](./TDA1381.pdf)
 The TDA1381 is a write amplifier that's used to generate the current for DCC recording heads. This particular write amplifier has 18 outputs (9 for each side) and is intended for portable recorders that don't have a rotating head.
+
+## [TDA1547 Digital Analog Converter](./TDA1547.pdf)
+The TDA1547 is a high quality D/A converter that works together with the SAA7350.
