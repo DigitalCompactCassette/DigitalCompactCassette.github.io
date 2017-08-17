@@ -1,0 +1,349 @@
+
+HOME
+PHILIPS AUDIO service bulletins and tips
+
+MODEL: DCC450 
+SYMPTOM: Random uP error 
+CURE: In case of random uP error one of the following phenomenons occur: - Display segments are activated in a random order (lightshow on the display) - No reaction on pressed buttons, hang-up of the software - Self-reset of the front-OTP Replace than the built-in front-OTP (pos.7401) by the mask-version: 7401 4822 209 33151TMP47CM71AF-6146 REMARKS: Concerns set produced between production weeks 9340-9342 The phenomenon is only reproducible at operation temperatures > 40 degrees centrigrade (celsius). At an ambient temp. of 20 degrees the warm-up takes between 1 and 2 hours.
+MODEL: DCC450 
+SYMPTOM: In some cases DCC cleaning cassette SBC3500 does not work properly. 
+CURE: This problem is caused by a too long capstan (marginal difference compared with DCC900) which carries the cleaning cassette from the inside. In this case the DCC sensor switches are not activated and cassette is not accepted. Either fix a piece of adhesive tape at the bottom side of the cassette housing or drill a hole of 4.5 mm through the housing. REMARKS : Existing stock of Philips Service Warehouse is being reworked by drilling the hole. New stock will arrive with a thinner housing at the position the capstan is touching the housing.
+MODEL: DCC450 
+SYMPTOM: Sometimes the use-again marker not found on customer recorded DCC. 
+CURE: (Endless loops during append) Cut off minus lead of Electrolytic Capacitor 2711 on read/write board. Solder wire from minus lead of 2711 to pin 11 of IC 7703 (Read amplifier TDA1317). REMARKS : This phenomenon occurs only on Printed Circuit Boards with production stage .4 and is caused by crosstalk from WDATA to INAUX signal line.
+MODEL: DCC450 
+SYMPTOM: Noisy tray, squeaking sound during open/close 
+CURE: Grease guiding parts of drawer pos. 209 resp. catch lever assembly pos. 216. with Molykote, service code 4822 390 20139.
+MODEL: DCC450 
+SYMPTOM: Cassette gets stuck behind the front when lifted at left side 
+CURE: This occurs when cassette is lifted at left side in order to remove it from the opened tray. The switch is opened/closed by a ridge, located at the back righthand corner of the drawer. To delay the switch actuation cut off some plastic of the ridge. Attention: This modification also takes an influence on the feature touch to close. If too much plastic is removed the tray might already close while a cassette is inserted ! Try to find an optimal compromise. CAUSE: The drawer (pos. 209) does not open far enough, because the tray-out switch (pos. 1437) is actuated too early. REMARKS: This publication will be followed by a service information.
+MODEL: DCC450 
+SYMPTOM: Correction partslist RED1 Tape Transport 
+CURE: Correction partslist RED1 Tape Transport Capstan motor item 1023 was 4822 361 21506 should read 4822 361 21646. 4822 361 21506 is capstan motor of REN and RER tape decks.
+MODEL: DCC450 
+SYMPTOM: Correction Partslist 
+CURE: Correction Partslist Front-uP item 7401 was 4822 209 32528 should read 4822 209 33151. Main-uPitem 7335 was 4822 816 50056 should read 4822 209 33152.
+MODEL: DCC450 
+SYMPTOM: Modification 
+CURE: Modification In course of production the power supply circuitry of the read/write board has been changed: * Double-diode pos. 6703 (BAV99 - 5322 130 34337) has been built-in in series to the voltage stabilizers 7701 and 7702. The double-diode reduces the input voltage of the stabilizers and thus the power dissipation of these ICs. * Voltage stabilizer pos. 7708 has been changed to a type with low voltage drop (LM2931Z-5.0 - 5322 209 60749), capacitor pos. 2764 is changed from 10nF to 10æF (4822 124 23179). Both actions improve the plop-behaviour when the set is powered-off during a recording session from an analog source. REMARKS: Modifications have been taken place in read/write boards from production stage .5 onwards. Production stage can be identified by the last digit of the twelve-figure number, located at the lower right corner of the printed circuit board.
+MODEL: DCC450 
+SYMPTOM: Initialising DCC 
+CURE: Initialising DCC NEW DCC CASSETTE: How to initialize the cassette (= making a lead-in recording at the beginning of the tape) is stated in the Instructions for Use. In the various typenumbers the following keys have to be activated: For DCC091, DCC450: REWIND, APPEND For DCC170: REWIND, REC PAUSE For DCC300, DCC380: REWIND, APPEND For DCC600: REWIND, APPEND For DCC730, DCC951: REWIND, REC SELECT/PAUSE For DCC900: REWIND, APPEND For more details: see Instructions for Use of concerned typenumber; chapter recording. After this initialization the track number and (absolute) time information will be recorded on the user-recorded tape. The above shown survey is a simplified universal applyable operation. The most problems are caused by the fact that users are accustomed to apply the record function straight forward, like recording ACC-cassettes. PARTIALLY RECORDED For all typenumbers, except DCC170: Use APPEND to search for end of last recording in case of partially recorded DCC-tape and so proper coupling of old and new recordings is made. For DCC170: Search Manually for END indication of last recording and make new recordings from that spot onwards. OVERWRITING In case of completely overwriting a user-recorded DCC-tape the initializing procedure has to be performed again! CONCLUSION: It is very important to initialize a user-recorded DCC-tape. If a DCC-tape is initialized or not, can easily be seen on the display information in Play-back mode. Starting at the beginning of the tape track time An empty DCC tape:: Not initialized DCC tape (User format) 11 : 24 Initialized DCC tape (Super-user format)312 : 49
+MODEL: DCC450 
+SYMPTOM: Guidance form 
+CURE: Guidance form - Next Guidance form is enclosed at repairable unit 4822 691 20833. Please notice the wiring which should be included with the returned unit. GUIDANCE FORM REPAIRABLE UNIT 4822 691 20833 Please fill in this form and return it with the defective unit. TYPENUMBER (Unit demounted from set) : Serial number: COMPLAINT DESCRIPTION: INFORMATION GATHERED VIA SERVICE MODE EXTENDED PLAYMODE (selected via PLAY) WITH ERROR INDICATION (On display): MORE DETAILED OBSERVATIONS : YES NO TRAY LOADING OK DCC SOUND OK ANALOGUE SOUND OK MECHANICAL NOISE OK SPEED OK FRICTIONS OK TAPE TRANSPORT OK Return the defective unit complete assembled according to the drawing on the backside of this paper to: Invoice to: Philips Consumer Electronics B.V. 670005 Consumer Service - Price centre 5600 MD Eindhoven building SBP5 The Netherlands Ship to: Philips Consumer Electronics B.V. 676723 Consumer Service 5600 MD Eindhoven building SDM5 The Netherlands ATT: Mr. C. Lieberwirth CORRECTIVE ACTION/SOLUTION (to be filled in at central repair workshop): Report number:
+MODEL: DCC450 
+SYMPTOM: Customer problems when using DCC 
+CURE: Customer problems when using DCC In general playing back pre-recorded DCC-cassettes does not bring problems to users, because playback of such a cassette is more or less simular to operating a CD-player. A number of problems are found in the playing back and/or recording of the user-recorded DCC-cassettes, caused by not proper 'initializing' of ALL these cassettes. Initializing is important because this is closely linked to basic customer-expectations of a digital product: - Track number; - Time indication. The DCC-standard distinguishes 2 different formats of user-recorded DCC-tapes: a. Super-user format b. User format But there are also combinations of the 2 user-recorded formats possible: c. Combinations of the 2 formats. And there is the pre-recorded DCC tape format: d. Pre-recorded DCC SUMMARIZED CHARACTERISTICS: a. Super-user format: - continuous absolute time information available (remaining time is calculated by the set) - Track numbering and track title at start of track are possible. (this means that also renumber is possible) - Initialization required - TOC (Table of Contents) possible at start of track 1 For figures see Audio Service newsletter 63.01 On Display when super-user format is loaded at position a: TRACKTIME - -10:51 b. User format: - No continuous absolute time information available on tape - No track numbering/title. (this means that renumber is not possible) - No initialization required The start markers are only used for track access. On Display when user format is loaded at position b: TRACKTIME : Notice: track is blank! Some DCC typenumbers show counter settings, others the estimated time based on the tacho-signals. c. Combination of the 2 formats. - This format usually happens when the APPEND function is not used. - The APPEND function is designed to guarantee the Super-user format in case a recording is made at the end of a partially recorded tape. When a recording is started on a blank area, the result will always be a User-format. Correction by renumbering is not possible. d. Pre-recorded DCC - Continuous time information available (inclusive absolute time, track time, remaining time etc.) - Track information continuous available - TOC information continuous available - Track title information continuous available. - Display will show on what ever position loaded the track and time information. example: TRACKTIME 210:51
+MODEL: DCC450 
+SYMPTOM: Codenumber information 
+CURE: Codenumber information DCC Cleaning cassette SBC3500 is from now on available with service codenumber 4822 015 20646.
+MODEL: DCC450 
+SYMPTOM: Noisy fan 
+CURE: Noisy fan - Customer complains that the built-in fan is too noisy (fan runs continuously). For that reason a modification of the fan-control circuit has been implemented. Now fan is only switched on when the temperature in the set exceeds a defined limit. In practice the fan will be switched on after approx. 1.5 hours of operation. For adapted circuit diagram and location of NTC-sensor board see the prepared service information. A modification-kit can be ordered on special request. REMARKS : Temperature dependent fan-control is already built-in in sets with factory change code WT01 onwards. This publication will be followed by a service information.
+MODEL: DCC450 
+SYMPTOM: Service Manual correction Electrical partslist 
+CURE: Service Manual correction Electrical partslist digital board Codenumber for A/D-converter AK5339 (pos. 7514) was 4822 209 31622, should read 4822 209 33849.
+MODEL: DCC600 
+SYMPTOM: The display does not light up at all. 
+CURE: Check the -30V. If not available, check T7201 (4822 130 41327).
+MODEL: DCC600 
+SYMPTOM: Totally inoperative. 
+CURE: Check solder joints of mainsswitch S1204.
+MODEL: DCC600 
+SYMPTOM: Totally inoperative. (No display and no functions) 
+CURE: Check the main and front uP.
+MODEL: DCC600 
+SYMPTOM: No tape transport. The capstan motor does not run. 
+CURE: Check for short circuit in the deck motor PCB.
+MODEL: DCC600 
+SYMPTOM: Digital no sound, analog weak, reading and winding all the time. 
+CURE: Clean the head.
+MODEL: DCC600 
+SYMPTOM: DCC sound interrupting. CC plays O.K. 
+CURE: Check Dig. PCB (4822 214 33899).
+MODEL: DCC600 
+SYMPTOM: On Playback of DCC tapes the Audio drops out. 
+CURE: Set up as per the Service Manual the CASS motor speed (3264)
+MODEL: DCC600 
+SYMPTOM: No recording, play back O.K. 
+CURE: Check digital PCB. Codenr. 4822 214 33899
+MODEL: DCC600 
+SYMPTOM: Stops playing DCC tapes after a few seconds. 
+CURE: Check whether connector 1327 is mounted well.
+MODEL: DCC600 
+SYMPTOM: Totally inoperative after some time. 
+CURE: Check transistor T7349.
+MODEL: DCC600 
+SYMPTOM: The digital sound is sometimes interrupted. 
+CURE: Replacing the digital printed board will solve the problem. The service codenumber of this board reads: 4822 214 33899. REMARKS : All sets from production week 9323 onwards have been modified.
+MODEL: DCC600 
+SYMPTOM: First 200 msec. no sound after next and prevous. 
+CURE: Replace main processor to software version V72.
+MODEL: DCC600 
+SYMPTOM: Sometimes no sound on right speaker. 
+CURE: Check Dig.PCB 4822 214 33899.
+MODEL: DCC600 
+SYMPTOM: Sound distorsion by interfering of a TV set. 
+CURE: When the set is placed in the neighbourhood of a TV set (K40 type) the sound from the DCC is distorted. The distortion disappears as soon as the TV set is switched-off. As all DCC recorder complies the Philips requirements concerning magnetic fields it is advised to rearrange the set-up. It is known that some strong fields will interfere with the head connections. For this reason in the IFU is published: Do not place the DCC...near magnetic fields ... , ..) Placing the DCC at the other side of the TV-set (away from the high voltage transformer) can solve the problem. Adding an additional metal screen is also possible but is not a 'nice' solution in a home set-up.
+MODEL: DCC600 
+SYMPTOM: After about 5 minutes, set stops playing and relay starts clicking. 
+CURE: Check IC7711 (PLC) 4822 209 31993.
+MODEL: DCC600 
+SYMPTOM: After some time noisy sound. 
+CURE: Check digital PCB. It might be that ADC (AK5326) is heat sensitive. Replace digital PCB. (4822 214 33899)
+MODEL: DCC600 
+SYMPTOM: Sometimes middle and right-hand segments of display are failing. 
+CURE: Check solder joints of the front processor and the FTD.
+MODEL: DCC600 
+SYMPTOM: Distortion of TV signal when DCC is in Play mode. 
+CURE: Add screening (item 568) between DCC loader part and transformer/supply part.
+MODEL: DCC600 
+SYMPTOM: In some cases DCC cleaning cassette SBC3500 does not work properly. 
+CURE: This problem is caused by a too long capstan (marginal difference compared with DCC900) which carries the cleaning cassette from the inside. In this case the DCC sensor switches are not activated and cassette is not accepted. Either fix a piece of adhesive tape at the bottom side of the cassette housing or drill a hole of 4.5 mm through the housing. REMARKS : Existing stock of Philips Service Warehouse is being reworked by drilling the hole. New stock will arrive with a thinner housing at the position the capstan is touching the housing.
+MODEL: DCC600 
+SYMPTOM: The player is reading and winding continuously. 
+CURE: Check digital PCB (4822 214 33899)
+MODEL: DCC600 
+SYMPTOM: Too much wow and flutter on side A. 
+CURE: Check pressure roller side A.
+MODEL: DCC600 
+SYMPTOM: After some time maximum error rate. 
+CURE: Check digital PCB (DDSP IC7506 temperature sensitive ?). Service codenumber digital PCB is 4822 214 33899.
+MODEL: DCC600 
+SYMPTOM: Noisy and weak sound on the left channel with ACC. DCC OK. 
+CURE: Tape drive unit defective. Replace tape drive unit.
+MODEL: DCC600 
+SYMPTOM: Does not play DCC cassettes. Max. error rate after cleaning head 
+CURE: Replace the tape drive unit.
+MODEL: DCC600 
+SYMPTOM: Scratching sound audible when switching on. 
+CURE: Check motor holder pos. 120 (4822 256 92024).
+MODEL: DCC600 
+SYMPTOM: Display inoperative. No light in the display. 
+CURE: No -30V. Check safety resistor R3203.
+MODEL: DCC600 
+SYMPTOM: Transistor 7355 (BC817/40) in solenoid control circuit defective. 
+CURE: Replace defective transistor by a new one (4822 130 42615). Check soldering of diode 6308 (BAS16) and the functioning of transistor 7205 (BD434) on main board. Check also the cooling of transistor 7205 on main board. REMARKS : Insufficient pressure of transistor clips will cause an increasing supply voltage of the play magnet (voltage on solenoid > 15V), which can destroy transistor 7355.
+MODEL: DCC600 
+SYMPTOM: Audio recorded on digital tape, no time or track nr. recorded. 
+CURE: By replacing the tape deck mechanism it was found that this was actually causing the fault. Codenr. 4822 691 20833.
+MODEL: DCC600 
+SYMPTOM: Sometimes the use-again marker not found on customer recorded DCC. 
+CURE: (Endless loops during append) Cut off minus lead of Electrolytic Capacitor 2711 on read/write board. Solder wire from minus lead of 2711 to pin 11 of IC 7703 (Read amplifier TDA1317). REMARKS : This phenomenon occurs only on Printed Circuit Boards with production stage .4 and is caused by crosstalk from WDATA to INAUX signal line.
+MODEL: DCC600 
+SYMPTOM: Set comes in a hang-up situation. 
+CURE: The reset circuit has been improved to prevent hang-up, by changing item 3419 (refer to service manual page 48, mapping code M12) from 47k into 4k7 (4822 051 20472). (From productionweek 9316 onwards.)
+MODEL: DCC600 
+SYMPTOM: At first time cassette plays normally, second time set stops. 
+CURE: Second time set stops in the middle of cassette. Resolder resistor 3263. Maybe this chip resistor 3263 was not good soldered and sometimes it does not make contact. This results in failing of the capstan motor. CAUSE : Temporally this resistor was hand mounted. From week 9312 onwards this mounting process has been changed.
+MODEL: DCC600 
+SYMPTOM: Noisy tray, squeaking sound during open/close 
+CURE: Grease guiding parts of drawer pos. 209 resp. catch lever assembly pos. 216. with Molykote, service code 4822 390 20139.
+MODEL: DCC600 
+SYMPTOM: Poor loading function 
+CURE: Slider opener (pos. 216-219 of Exploded View) lands on top of cassette. REASON: Shutter (pos. 552) out of form. Left side touches either bracket (pos. 551) or controlling lever (pos. 556). SOLUTION: Bend left side of shutter so, that there is no contact to other parts (min. distance between pos. 551 and pos. 552>= 0,1mm). REMARKS: Loading assemblies, marked with a red cross on the top of bracket 551, are already checked by the factory.
+MODEL: DCC600 
+SYMPTOM: Cassette gets stuck behind the front when lifted at left side 
+CURE: This occurs when cassette is lifted at left side in order to remove it from the opened tray. The switch is opened/closed by a ridge, located at the back righthand corner of the drawer. To delay the switch actuation cut off some plastic of the ridge. Attention: This modification also takes an influence on the feature touch to close. If too much plastic is removed the tray might already close while a cassette is inserted ! Try to find an optimal compromise. CAUSE: The drawer (pos. 209) does not open far enough, because the tray-out switch (pos. 1437) is actuated too early. REMARKS: This publication will be followed by a service information.
+MODEL: DCC600 
+SYMPTOM: When using an ACC (analogue cassette) the drawer does not open. 
+CURE: Plastic edge inside loading causes an analog cassette to get stuck. Remove the plastic edge.
+MODEL: DCC600 
+SYMPTOM: Drawer does not open. 
+CURE: Check pos.212 (4822 403 70851)
+MODEL: DCC600 
+SYMPTOM: Gives DCC with CC cassette. Sometimes cass.blocked. 
+CURE: Slide opener lands on top of cassette. Check position of the mounting tape foot.
+MODEL: DCC600 
+SYMPTOM: Updating uPs 
+CURE: Updating uPs During the course of production the uP's in 70DCC300, 70DCC380 and 70DCC600 have been modified. Sets produced between week 9302 and week 9331 have old versions. In case one of the two uP's has to be exchanged in those sets, the other uP has to be replaced too, because in spare parts warehouse only the last versions are taken on stock. From week 9331 onwards front uP (item 7410) reads TMP870M70AF-6123 MASK V67 (available with service code 4822 209 32528). Main uP (item 7335) reads P83C528FBP/054 MASK V69 (available with 4822 209 32974). REMARKS: This publication will be followed by service information a93-362
+MODEL: DCC600 
+SYMPTOM: Service Manual correction Electrical partslist 
+CURE: Service Manual correction Electrical partslist digital board Codenumber for A/D-converter AK5339 (pos. 7514) was 4822 209 31622, should read 4822 209 33849.
+MODEL: DCC600 
+SYMPTOM: Guidance form 
+CURE: Guidance form - Next Guidance form is enclosed at repairable unit 4822 691 20833. Please notice the wiring which should be included with the returned unit. GUIDANCE FORM REPAIRABLE UNIT 4822 691 20833 Please fill in this form and return it with the defective unit. TYPENUMBER (Unit demounted from set) : Serial number: COMPLAINT DESCRIPTION: INFORMATION GATHERED VIA SERVICE MODE EXTENDED PLAYMODE (selected via PLAY) WITH ERROR INDICATION (On display): MORE DETAILED OBSERVATIONS : YES NO TRAY LOADING OK DCC SOUND OK ANALOGUE SOUND OK MECHANICAL NOISE OK SPEED OK FRICTIONS OK TAPE TRANSPORT OK Return the defective unit complete assembled according to the drawing on the backside of this paper to: Invoice to: Philips Consumer Electronics B.V. 670005 Consumer Service - Price centre 5600 MD Eindhoven building SBP5 The Netherlands Ship to: Philips Consumer Electronics B.V. 676723 Consumer Service 5600 MD Eindhoven building SDM5 The Netherlands ATT: Mr. C. Lieberwirth CORRECTIVE ACTION/SOLUTION (to be filled in at central repair workshop): Report number:
+MODEL: DCC600 
+SYMPTOM: Customer problems when using DCC 
+CURE: Customer problems when using DCC In general playing back pre-recorded DCC-cassettes does not bring problems to users, because playback of such a cassette is more or less simular to operating a CD-player. A number of problems are found in the playing back and/or recording of the user-recorded DCC-cassettes, caused by not proper 'initializing' of ALL these cassettes. Initializing is important because this is closely linked to basic customer-expectations of a digital product: - Track number; - Time indication. The DCC-standard distinguishes 2 different formats of user-recorded DCC-tapes: a. Super-user format b. User format But there are also combinations of the 2 user-recorded formats possible: c. Combinations of the 2 formats. And there is the pre-recorded DCC tape format: d. Pre-recorded DCC SUMMARIZED CHARACTERISTICS: a. Super-user format: - continuous absolute time information available (remaining time is calculated by the set) - Track numbering and track title at start of track are possible. (this means that also renumber is possible) - Initialization required - TOC (Table of Contents) possible at start of track 1 For figures see Audio Service newsletter 63.01 On Display when super-user format is loaded at position a: TRACKTIME - -10:51 b. User format: - No continuous absolute time information available on tape - No track numbering/title. (this means that renumber is not possible) - No initialization required The start markers are only used for track access. On Display when user format is loaded at position b: TRACKTIME : Notice: track is blank! Some DCC typenumbers show counter settings, others the estimated time based on the tacho-signals. c. Combination of the 2 formats. - This format usually happens when the APPEND function is not used. - The APPEND function is designed to guarantee the Super-user format in case a recording is made at the end of a partially recorded tape. When a recording is started on a blank area, the result will always be a User-format. Correction by renumbering is not possible. d. Pre-recorded DCC - Continuous time information available (inclusive absolute time, track time, remaining time etc.) - Track information continuous available - TOC information continuous available - Track title information continuous available. - Display will show on what ever position loaded the track and time information. example: TRACKTIME 210:51
+MODEL: DCC600 
+SYMPTOM: Initialising DCC 
+CURE: Initialising DCC NEW DCC CASSETTE: How to initialize the cassette (= making a lead-in recording at the beginning of the tape) is stated in the Instructions for Use. In the various typenumbers the following keys have to be activated: For DCC091, DCC450: REWIND, APPEND For DCC170: REWIND, REC PAUSE For DCC300, DCC380: REWIND, APPEND For DCC600: REWIND, APPEND For DCC730, DCC951: REWIND, REC SELECT/PAUSE For DCC900: REWIND, APPEND For more details: see Instructions for Use of concerned typenumber; chapter recording. After this initialization the track number and (absolute) time information will be recorded on the user-recorded tape. The above shown survey is a simplified universal applyable operation. The most problems are caused by the fact that users are accustomed to apply the record function straight forward, like recording ACC-cassettes. PARTIALLY RECORDED For all typenumbers, except DCC170: Use APPEND to search for end of last recording in case of partially recorded DCC-tape and so proper coupling of old and new recordings is made. For DCC170: Search Manually for END indication of last recording and make new recordings from that spot onwards. OVERWRITING In case of completely overwriting a user-recorded DCC-tape the initializing procedure has to be performed again! CONCLUSION: It is very important to initialize a user-recorded DCC-tape. If a DCC-tape is initialized or not, can easily be seen on the display information in Play-back mode. Starting at the beginning of the tape track time An empty DCC tape:: Not initialized DCC tape (User format) 11 : 24 Initialized DCC tape (Super-user format)312 : 49
+MODEL: DCC600 
+SYMPTOM: Adjustment head current 
+CURE: Adjustment head current - In case the read/write head of the DCC mechancism should be exchanged and/or the read/write IC's are defective the head current has to be re-adjusted. Because at this moment the needed test equipment is not available, this will be done in a central repair procedure. The following codenumbers are resorted in this repair procedure, at Philips Consumer Service known with code (REPARI 1 and 4): For 70DCC900: The complete tape deck mechanism item service codenumber 001M 4822 691 20777 For 70DCC300, 70DCC380 and 70DCC600: The complete loading mechanism item service codenumber LDU4822 691 20833 and The complete digital board (PCB5) item service codenumber 4822 214 33899 In case of a repair one has to ship, without waiting, the defective item to: Invoice to: Philips Consumer Electronics B.V. 670005 Consumer Service - Price centre 5600 MD Eindhoven building SBP5 The Netherlands Ship to: Philips Consumer Electronics B.V. 676723 Consumer Service 5600 MD Eindhoven building SDM5 The Netherlands ATT: Mr. C. Lieberwirth Please enclose a copy of the invoice inside the carton. The rest of the instructions are according to the PCS repair procedure available at the desk of Mr. Lieberwirth, Repair Manager, Phone +31-40-735509, Fax +31-40-734515
+MODEL: DCC600 
+SYMPTOM: Trackselection 
+CURE: Trackselection Direct track access is meant to search a wanted tracknumber by taking the shortest path to get to the track. Due to the differences in possible tapes, this topic is rather complex: * On a pre-recorded DCC tape, the Table Of Contents is always recorded continuously on the tape. This means that direct track access is possible. When jumping from track 3 to track 8. In this case the side is changed (from A to B) This is the SHORT SEARCH. * On a user-recorded tape, the Table Of Contents (TOC) cannot be recorded continuously. The TOC has be adapted all over the tape as soon as the recording on the tape is changed. For this reason the TOC can only be written at the start of track 1. This means that now jumping from track 3 to 8 results in so called SEQUENCIAL TRACK SEARCH. Jumping from track 3 to track 8 is done via track 4, 5, 6, and 7. In practise it has become clear that when a DCC is loaded, it is in many cases not positioned at the start of track 1. This means that the only alternative is sequential track search: The deck will in some cases not take the shortest path as the location of the required track is unknown. IMPLEMENTATION: DCC900 Writing TOC on user-recorded DCC was planned but did not fit into the microprocessor internal ROM capacity. To delete this possibility from the specification was a last minute decision. Unfortunately the Instruction For Use has not been adapted accordingly. That is why 10-key commands are not accepted (NO TOC message). There is no service solution available. DCC600 Writing TOC on user-recorded tape was also not possible because of the limitations of the microprocessor internal ROM capacity. Lessons are taken from DCC900, that is why the sequential search possibility has been implemented. When a 10-key command is issued and the TOC is not known, the deck will perform this above described sequential search. The result is that DCC600 will in only a few cases not respond to a 10-key command. Due to the fact that the microprocessor of the DCC900 is completely filled and no larger memory is available, a service solution which incorporates sequential search like DCC600 is not possible.
+MODEL: DCC600 
+SYMPTOM: Modification speed control 
+CURE: Modification speed control In the course of production the temperature stability circuit of the speed control has been improved. This may influence the compatibility of the LDU1000 loading assy (4822 691 20833). This loading has to match with the various versions of the main pcb because components on PCB3 (main pcb) and PCB6 (dcc-indicator) have been changed. Situation Loading marked LDU1000 WT00 and WT01: PCB3: R3262 (12k) with parallel to it potentiometer 3264 (10k). In series with this 3263 (12k). PCB6: NTC-resistor 3160 (150R) in series with capstan motor. Situation Loading marked LDU1000 WT02: PCB3: R3262 (deleted), potentiometer 3264 (4k7). In series with this potentiometer 3263 (15k). PCB6: Resistor 3160 (100k) in series with diode 6601 (kathode at 3263 and - (MINUS) capstan motor, anode at 3160) parallel to capstan motor. Therefore: In case the loading assy with with printed board PCB6 has to be replaced the built-in main pcb has to be matched to the production stage of the LDU1000 delivered. Replacement procedure: 1)When replacing a Loading marked LDU1000 WT00 or WT01 by a WT02 version, R3263 has to be changed from 12k to 15k! When replacing a Loading marked LDU1000 WT02 by a WT00 or WT01 version, R3263 has to be changed from 15k to 12k! 2)Adjust speed control as described on page 28 of service manual. 3)Check Tape up torque, wow and flutter (for limits see page 28 of Service Manual). 4)Check Analog feedback level and bias. (read/write pcb) 5)Check Dolby level if necessary (main pcb)
+MODEL: DCC600 
+SYMPTOM: Codenumber information 
+CURE: Codenumber information DCC Cleaning cassette SBC3500 is from now on available with service codenumber 4822 015 20646.
+MODEL: DCC600 
+SYMPTOM: Availability of front boards 
+CURE: Availability of front boards Front boards for DCC-recorders with mounted uP are available now: 70DCC300 : 4822 214 52176 front board 70DCC380 : 4822 214 52177 front board 70DCC600 : 4822 214 52178 front board
+MODEL: DCC600 
+SYMPTOM: Correction partslist RED1 Tape Transport 
+CURE: Correction partslist RED1 Tape Transport Capstan motor item 1023 was 4822 361 21506 should read 4822 361 21646. 4822 361 21506 is capstan motor of REN and RER tape decks.
+MODEL: DCC600 
+SYMPTOM: Corrections to the service manual 
+CURE: Corrections to the service manual - The service test program (page 25-26) Key test : Correct key to enter this test is 'MARK WRITE' Hole test: This test can only be entered if tray is in opened position. In tray test the tray is moved outside. So first start with tray test before hole test. IR test: RC-5 codes of TEXT and TIME have been exchanged in this publication. RC-5 code for TIME should read '11', RC-5 code for TEXT should read '122'. Adjustment table (page 28) Position number of potentiometer for take-up torque should read 3280. REMARKS: This publication will be followed by service information A93-362
+MODEL: DCC600 
+SYMPTOM: Modification 
+CURE: Modification In course of production the power supply circuitry of the read/write board has been changed: * Double-diode pos. 6703 (BAV99 - 5322 130 34337) has been built-in in series to the voltage stabilizers 7701 and 7702. The double-diode reduces the input voltage of the stabilizers and thus the power dissipation of these ICs. * Voltage stabilizer pos. 7708 has been changed to a type with low voltage drop (LM2931Z-5.0 - 5322 209 60749), capacitor pos. 2764 is changed from 10nF to 10æF (4822 124 23179). Both actions improve the plop-behaviour when the set is powered-off during a recording session from an analog source. REMARKS: Modifications have been taken place in read/write boards from production stage .5 onwards. Production stage can be identified by the last digit of the twelve-figure number, located at the lower right corner of the printed circuit board.
+MODEL: DCC730 
+SYMPTOM: DCC head defect, no recording, several isolation shorts on DCC head. 
+CURE: Isolation shorts are caused by ESD. To protect against ESD replace (or bridge) C2999 on Read/Write panel by a 4k7 resistor (4822 051 20472). It is advised to introduce this in all sets with which will be offered for repair, and the modification has not yet been implemented yet. Implementation date: In R/W boards from production week 9540 onwards.
+MODEL: DCC730 
+SYMPTOM: When recording analog, no sound recorded on the tape. 
+CURE: Press plug CN1315 completely in connector.
+MODEL: DCC730 
+SYMPTOM: Right channel inoperative after analogue recording. 
+CURE: Check mounting of plug in connector CN1315.
+MODEL: DCC730 
+SYMPTOM: The DCC recorder does not record. 
+CURE: The write amplifier is switched into protection. Replace the read/write head.
+MODEL: DCC730 
+SYMPTOM: Sometimes check digital in in display. 
+CURE: Check/replace CN1100.
+MODEL: DCC730 
+SYMPTOM: OPERATING: Operate DCC recorder 
+CURE: Problem: It is difficult to operate DCC recorde. Cause: DCC recorder is software controlled (play back = CD similar). REMARKS : Correct understandings of the user-recorded tape formats and markers will help customers to make full use of the benefits of the DCC recorder. See also newsletter 63.01. For ease of operationg a quick reference card is made available: For DCC730 with service code 4822 725 22612 For DCC951 with service code 4822 725 22611 These reference cards contain clear pictograms to operate the DCC recorder for every mode.
+MODEL: DCC730 
+SYMPTOM: OPERATING: Renumbering 
+CURE: Problem: Renumbering not possible when making a new recording at specific location. Cause: In User format is RENUMBER not possible. REMARKS : Before recording first initializing of the tape has to be performed. See also newsletter item 63.01
+MODEL: DCC730 
+SYMPTOM: OPERATING: Music passages are lost 
+CURE: Problem: Music passages are lost after renumbering. Cause: 'CONTINUE B' (REVERSE) and 'GO TO START A' (STOP) marker cannot be erased. REMARKS : Markers which are recorded on the tape, control the set in play back mode. This means that in PLAY mode all information recorded on tape behind the 'Continue B' marker or 'Go to Start A' marker is skipped. The recordings behind those markers can only be reached by winding over that marker.
+MODEL: DCC730 
+SYMPTOM: OPERATING: Track numbering 
+CURE: Problem: Track numbering does not start at number 1 when recording side B. Cause: Per default single Album format is defined. REMARKS : Track numbering starts at side A (when AUTO EDIT ON) directly after the LEAD-IN area with number 1. Track numbering is automatically incremented when recording new tracks and continues on side B. In other words the DCC tape is seen as one single album where one may select a particular track, and it does not matter whether the required track is on side A or B of the tape. If user wants to start track numbering with track 1 on side B to obtain e.g. a dual Album, EDIT function must be performed. When in REC-PAUSE mode: - - press EDIT key to enter the edit mode - select required EDIT function by pressing EDIT several times - press RECORD key to actually edit the tape. Next edit functions are available: - - START NEW SIDE: to start track numbering on side B with track number 1. When restarting of track numbering is required, user must search for last recording on side A, record START NEW SIDE indication. - CONTINUE B: track numbering is continued at side B. - GO TO START A: marks the position where the deck should start winding to the beginning of side A and stop.
+MODEL: DCC730 
+SYMPTOM: RECORDING: Analog level 
+CURE: Problem: Analog level cannot be reduced until zero using REC LEVEL control. Cause: No analog fade in/out option available. REMARKS : Recording level control is not meant to obtain fade in/out effects for own analog recordings. Typical fade in/out feature is not available on DCC sets. Analog recording level control is meant to be used for adapting input level for analog signals. To obtain real fade in/out effects an audio mixing unit (e.g. SBC5370), connected to AUX - ANALOG IN, should be applied.
+MODEL: DCC730 
+SYMPTOM: RECORDING: Clicks are audible 
+CURE: Problem: Clicks are audible when interrupting recording with REC PAUSE. Cause: Difference between digital mute (-110dB) and analog silence (>-30dB) can be recognized as click being recorded. REMARKS : By mixing different titles (from e.g. various Vinyl Records) clicks are audible between the analog silence signal of the vinyl recording and the interrupting of the recording with REC PAUSE (digital mute). It is this difference in level between the analog silence and the digital mute (system detects a sudden increase of level) that the DCC recorder records, and is audible as a click during play back at high volume level.
+MODEL: DCC730 
+SYMPTOM: PLAYBACK: DCC cassettes 
+CURE: Problem: DCC cassettes causing faults (a.o. drop outs, tape salad, clean head). Cause: DCC cassettes outside specification. REMARKS: The used DCC cassette is not according the DCC specification and so NOT released by Philips. (e.g. some of Maxell and Fuji cassettes) It is recommended to use released Philips DCC cassettes only.
+MODEL: DCC730 
+SYMPTOM: PLAYBACK: Skipping small part of music 
+CURE: Problem: Skipping small part of music of pre-recorded DCC-cassettes after track search Cause: Repositioning problem due to high fast wind/rewind speed. REMARKS: After track search command the DCC does not start exactly at the beginning of a track. First approx. 500 msec. of track are not played back. This problem does not occur when DCC-cassette is played-back normally. This deviation is dependant on the position of the tape; via the reel-tacho signals the movement of the reel is measured not the tape. To reduce this error a compensation is done, based on an average required repositioning within ± 0.5 sec. Only in the minus area this short jump could be noticed. This problem cannot be solved.
+MODEL: DCC730 
+SYMPTOM: TRACK AND TIME: REMaining time 
+CURE: Problem: REMaining time indication is not reliable. Cause: Calculation of remaining time by DCC recorder REMARKS : The DCC recorder starts with defining an estimated total remaining time. After that it calculates the elapsed time by reading total time information of played back tracks. The remaining time left on tape is the estimated playing time of the cassette minus the elapsed time. The remaining time might have a tolerance of about 1 minute. So it might happen that for instance the display shows 'REM TIME 5:38, and yet a music piece of about 4:14 will not fit.
+MODEL: DCC730 
+SYMPTOM: TRACK AND TIME: Track and Time information is erased 
+CURE: Problem: Track and Time information is erased when adding text information. Cause: Not correct initialized cassette. REMARKS : Sometimes track number and time information is erased when recording text information. When using RENUMBER to reconstruct the track numbering again the missing time information will be misinterpreted as tape end and tape direction is reversed, while renumbering continues on side B.
+MODEL: DCC730 
+SYMPTOM: OPERATING: Operation of source selector 
+CURE: Problem: Operation of source selector is not clear. Cause: IFU does not explain selection of source very clear. REMARKS : After installation of the DCC recorder all input sources should be selected via source preset. This is done as follows: - Press PRESET - By pressing REC SELECT/PAUSE the default CD is indicated on display. By pressing NEXT key the cable connection made with CD player can be selected. By pressing again REC SELECT/PAUSE the next input source (tuner etc) can be selected. Every time again the applied cable connection with source can be selected via the NEXT key. - When all sources (to be recorded from) via REC SELECT/PAUSE and NEXT are selected these presettings are stored by pressing PRESET. Making a recording from one of the sources the latest used source (this setting is also stored by the set) is selected. If another source should be selected this is done as follows: - Press REC SELECT/PAUSE, the default source is already indicated on display (except Microphone). - By pressing REC SELECT/PAUSE again next source is selected. - Subsequently pressing REC SELECT/PAUSE gives the other available sources. Sequence of source selection is CD TUNER AUX1 AUX2 CD TUNER, etc. In case microphone socket has been connected this input source is selected automatically. NOTE:In case a digital recording will be made from CD or AUX as source and no digital connection is made the message: 'CHECK DIG IN' is displayed and one should reconnect digital cable from recorder to source. For more detailed information See the Instructions for Use. A quick reference card for ease of operating is made available: For DCC730 with service code 4822 725 22612 For DCC951 with service code 4822 725 22611 These reference cards contain clear pictographs to operate the DCC recorder.
+MODEL: DCC730 
+SYMPTOM: OPERATING: AUTO STOP mode 
+CURE: Problem: DCC recorder does not stop after last recording when selected AUTO STOP mode. Cause: Auto stop function is wrongly interpreted by user. REMARKS : With the PRESETS function the playback function can be set as soon as a cassette is inserted. With playback set at AUTO PLAY, playback will always be started automatically as soon as the tray has been closed (and cassette is inserted) by pushing the tray by hand or the POWER has been switched ON. With playback set at AUTO STOP, playback will not start automatically. NOTE:To find last recording user should use APPEND to search for the end of the last recording (which was marked when STOP was pressed during recording). APP > or APP < appears. When this position has been found the last 10 seconds will be played back (APPEND PLAY), after which the RECORD PAUSE (REC-P) mode is entered.
+MODEL: DCC730 
+SYMPTOM: RECORDING: Old recordings remain 
+CURE: Problem: Parts of old recordings remain after overwriting existing recordings. Cause: Cassette is not initialized correctly before overwriting. REMARKS : When a CD-synchro recording is made on a DCC-tape which was already recorded in the past, the set switches at the estimated end from side A to side B. When playing back this part of the tape first the 'new' music is heard followed by the 'old' music until end of side A and in the beginning of side B. This problem can be prevented by renumbering the tape. NOTE: To overwrite a previous recorded DCC tape press REWIND key more than 0.5 second (set must be in STOP mode). Tape is rewound to the beginning of the tape. By pressing REC SELECT/PAUSE key the LEAD IN portion of about 10 seconds is recorded. Afterwards the set goes to Record Pause mode. When pressing RECORD the recording starts and tape will be completely overwritten. Set 'sees' tape as being new. To record in the middle of an existing track (recording on a specific location) first the location should be searched, than (in STOP mode) press subsequently REC SELECT/PAUSE and RECORD.
+MODEL: DCC730 
+SYMPTOM: RECORDING: Track numbering 
+CURE: Problem: Track numbering DCC does not match with the track numbering of the source (e.g. when digital copying a Compact Disc) Cause: Track number is automatically increased at end of side A with CD SYNCHRO OFF. REMARKS : At end of side A a CONTINUE B marker is recorded. The DCC standard requires a new track number at the start of side B. This marker is not on the CD, so all recordings from side B have a track number (CD track number + 1).
+MODEL: DCC730 
+SYMPTOM: RECORDING: Track numbering 
+CURE: Problem: Track numbering does not match with the track numbering of the source (e.g. when analog copying a Compact Disc). Cause: Track number is recorded after an analog silence (signal level below -60dB) for more than 3 seconds and track number is automatically increased at end of side A with CD SYNCHRO OFF. REMARKS : - In AUTO EDIT ON mode a new track number will be written after every silence for more than 3 seconds, where 'silence' is defined as an analog signal level below -60dB. It might happen that a source (Compact Disc) has music pauses for more than 3 seconds within one music number, or pauses between tracks are shorter than 3 seconds. User may edit the track numbering afterwards by CONNECTing or SPLITting TRACKS. By connecting tracks the current and next 'pause' track will be connected and later on recognized as one track. During this action the DCC recorder will erase the START indication of that 'pause' track. By splitting tracks the current track will be split up in two successive tracks. - DCC standard requires a new track number at the start of side B. (See also problem RECORDING: Writing markers in AUDIO EDIT) NOTE:When tracks have been connected or splitted also a RENUMBER action is necessary to ensure a correct track number sequence.
+MODEL: DCC730 
+SYMPTOM: PLAYBACK: CLEAN HEAD 
+CURE: Problem: CLEAN HEAD indication Cause: Contaminated head. REMARKS : The special design of DCC-head makes it sensitive for contamination, especially when low quality ACC tape (Fe tape) is used. The applied DCC tape consists of high quality chrome tape, which will not contaminate the head. In order to ensure high quality recording the warning of the CLEAN HEAD indication is displayed according following criteria: - about 8 hours of total playing back time of ACC tape. - 2 channels or more on DCC tape not detected by DCC head for more than 3 seconds. please notice:In case CLEAN HEAD indication was caused by a temporarily bad HEAD-TAPE contact, the message will disappear after pressing the 'TIME' or 'TEXT' key.
+MODEL: DCC730 
+SYMPTOM: RECORDING: Writing markers in AUTO EDIT 
+CURE: Problem: Writing markers in AUTO EDIT mode after more than 3 seconds of silence. Cause: IFU mentions 3 seconds of silence. REMARKS : In AUTO EDIT ON mode the DCC recorder writes new track numbers on the tape when silences (signal level below -60dB) of more than 3 seconds are detected during recording from ANALOG input. The signal level of the source must be below -60dB before DCC system recognizes a music pause. It might happen that during fading out of music, the user perceives a silence but that signal level is not dropped below -60dB. In this case the music pause seems to be much longer than 3 seconds. Note: In AUTO EDIT OFF the DCC recorder will not perform automatic track increment when recording from analog sources. AUTO EDIT is always set to ON when a digital source is connected (via digital sockets).
+MODEL: DCC730 
+SYMPTOM: RECORDING: Microphone recording input 
+CURE: Problem: Microphone recording input is only Mono Cause: Only Mono microphone pre-amplifier designed. REMARKS : When microphone is connected, the DCC set automatically selects the MONO microphone input. Recording via another source is not possible as long as microphone is connected. When Stereo recording via microphone is required it is recommended to connect microphone(s) to an audio mixing unit (e.g. SBC5370) which must be connected to AUX, ANALOG IN.
+MODEL: DCC730 
+SYMPTOM: PLAYBACK: De-emphasis 
+CURE: Problem: De-emphasis in DCC player is not functioning after making a digital copy of a Compact Disc. Cause: In PLAYBACK mode the DCC recorder switches de-emphasis ON or OFF dependant to the contents of the system information (SYSINFO). REMARKS : De-emphasis of a DCC recording is only activated in PLAYBACK mode if concerned bit in sysinfo is switched on. This flag is set during recording from digital input. This information is sent from the CD player to the DCC recorder. In play back the DCC recorder switches de-emphasis on or off dependant of the flag setting in sysinfo. Recording via analog input will not set the de-emphasis flag. This is already performed in the CD player via the information in the SUBCODE. Manually on/off switching of de-emphasis by user is not possible.
+MODEL: DCC730 
+SYMPTOM: Codenumber information 
+CURE: Codenumber information A small quantity of complete Digital Deck Units is available with service codenumber 4822 691 10666.
+MODEL: DCC730 
+SYMPTOM: Initialising DCC 
+CURE: Initialising DCC NEW DCC CASSETTE: How to initialize the cassette (= making a lead-in recording at the beginning of the tape) is stated in the Instructions for Use. In the various typenumbers the following keys have to be activated: For DCC091, DCC450: REWIND, APPEND For DCC170: REWIND, REC PAUSE For DCC300, DCC380: REWIND, APPEND For DCC600: REWIND, APPEND For DCC730, DCC951: REWIND, REC SELECT/PAUSE For DCC900: REWIND, APPEND For more details: see Instructions for Use of concerned typenumber; chapter recording. After this initialization the track number and (absolute) time information will be recorded on the user-recorded tape. The above shown survey is a simplified universal applyable operation. The most problems are caused by the fact that users are accustomed to apply the record function straight forward, like recording ACC-cassettes. PARTIALLY RECORDED For all typenumbers, except DCC170: Use APPEND to search for end of last recording in case of partially recorded DCC-tape and so proper coupling of old and new recordings is made. For DCC170: Search Manually for END indication of last recording and make new recordings from that spot onwards. OVERWRITING In case of completely overwriting a user-recorded DCC-tape the initializing procedure has to be performed again! CONCLUSION: It is very important to initialize a user-recorded DCC-tape. If a DCC-tape is initialized or not, can easily be seen on the display information in Play-back mode. Starting at the beginning of the tape track time An empty DCC tape:: Not initialized DCC tape (User format) 11 : 24 Initialized DCC tape (Super-user format)312 : 49
+MODEL: DCC730 
+SYMPTOM: Instructions for Use - Quick reference card 
+CURE: Instructions for Use - Quick reference card - To show all important operations of the DCC player a so called Quick reference card is inserted in the instructions for use. To have this quick reference card also available in service workshops (1 double sided A3 page) it can be ordered with service code number 4822 736 22612.
+MODEL: DCC730 
+SYMPTOM: Demo mode 
+CURE: Demo mode - A demo mode have been defined in the software program: Demo mode; Non protected: After switching-on the power and with the set in STOP position, the Demo mode can be entered by pressing the SCROLL button. Pressing the STOP button will disable this mode. Demo mode; protected (for the trade): When switching-on the power, while pressing the SCROLL button, the protected trade mode will be entered. In this mode the drawer cannot be opened. This mode can only be disabled by means of the O/C button of the remote control (or by erasing the EEPROM in service mode).
+MODEL: DCC730 
+SYMPTOM: Introduction of software USER 034 
+CURE: Introduction of software USER 034 - Improved software USER 034 is available as programmed OTP and can be ordered with service code 4822 900 10716. In comparison with software USER 032, the following complaints will be solved: - DCC is freezed by amplifier when DCC is searching from STOP or winding (should not be freezed). - TIMER PLAY on ACC: DCC always goes to TRACK 1 (should play from current position). - TIMER PLAY/RECORD with DCC awake and tray open: tray stays open (should close). - TIMER PLAY with superuser-tape and current tracknumber unknown: DCC starts playing from TRACK 1 (should play from current position). - TIMER PLAY on ACC: DCC doesn't wake up. - TIMER RECORD: DCC doesn't start recording. - CLEAN HEAD INDICATION
+MODEL: DCC730 
+SYMPTOM: Customer problems when using DCC 
+CURE: Customer problems when using DCC In general playing back pre-recorded DCC-cassettes does not bring problems to users, because playback of such a cassette is more or less simular to operating a CD-player. A number of problems are found in the playing back and/or recording of the user-recorded DCC-cassettes, caused by not proper 'initializing' of ALL these cassettes. Initializing is important because this is closely linked to basic customer-expectations of a digital product: - Track number; - Time indication. The DCC-standard distinguishes 2 different formats of user-recorded DCC-tapes: a. Super-user format b. User format But there are also combinations of the 2 user-recorded formats possible: c. Combinations of the 2 formats. And there is the pre-recorded DCC tape format: d. Pre-recorded DCC SUMMARIZED CHARACTERISTICS: a. Super-user format: - continuous absolute time information available (remaining time is calculated by the set) - Track numbering and track title at start of track are possible. (this means that also renumber is possible) - Initialization required - TOC (Table of Contents) possible at start of track 1 For figures see Audio Service newsletter 63.01 On Display when super-user format is loaded at position a: TRACKTIME - -10:51 b. User format: - No continuous absolute time information available on tape - No track numbering/title. (this means that renumber is not possible) - No initialization required The start markers are only used for track access. On Display when user format is loaded at position b: TRACKTIME : Notice: track is blank! Some DCC typenumbers show counter settings, others the estimated time based on the tacho-signals. c. Combination of the 2 formats. - This format usually happens when the APPEND function is not used. - The APPEND function is designed to guarantee the Super-user format in case a recording is made at the end of a partially recorded tape. When a recording is started on a blank area, the result will always be a User-format. Correction by renumbering is not possible. d. Pre-recorded DCC - Continuous time information available (inclusive absolute time, track time, remaining time etc.) - Track information continuous available - TOC information continuous available - Track title information continuous available. - Display will show on what ever position loaded the track and time information. example: TRACKTIME 210:51
+MODEL: DCC900 
+SYMPTOM: Set shows unexpected and/or unpredictable behaviour. 
+CURE: Check whether Trade Mode is disabled. To check this, see Frequently Asked Questions, How to disable Trade Mode.
+MODEL: DCC900 
+SYMPTOM: No audio on playback or record of digital cassettes. 
+CURE: On selecting the service mode and doing several checks it was indicated from the information that the tape head was faulty. Replacing the complete tape deck mechanism cured the fault. Codenr. 4822 691 20777.
+MODEL: DCC900 
+SYMPTOM: No sound when playing analog or DCC cassettes. 
+CURE: Check R301 (on the conversion panel).
+MODEL: DCC900 
+SYMPTOM: No sound. Seems like dirty heads. Service mode shows all F s. 
+CURE: Faulty Q301 on AD/DA panel. Replace Q301 (4822 209 30438). Check R804 and R301.
+MODEL: DCC900 
+SYMPTOM: No reaction from DCC recorder on signals from remote control. 
+CURE: Check if IR switch on back of DCC recorder was set to position off.
+MODEL: DCC900 
+SYMPTOM: Multi-room system is not functioning well with remote control. 
+CURE: Especially occuring with other sets of C9 series. While DCC900 is operating with the remote control in Room 2 ('speakers' set-up room), there is no sound output from the speakers. This happens only in the play-back mode with a pre-recorded tape and the direct track number search command. This is caused by the not correct easy link code output from the ESI-bus of the 70DCC900. Only in case the user complaints about this phenomenon the front uP (QD01) has to be replaced by the OTP µP(4822 209 52437). In case a set does not be equiped with the pull-down resistors (GD01 - GD04), the resistor arrays should be added. (The service manual is including the circuit and pcb drawings which have been drawn corresponding to situation that the OTP uP has been mounted.) QD01 Front OTP µP4822 209 52437 GD01 47kÛ x 10 4822 111 92126 GD02 47kÛ x 94822 111 92125 GD03 47kÛ x 84822 111 92124 GD04 47kÛ x 74822 111 92123
+MODEL: DCC900 
+SYMPTOM: CD SYNC mode in combination with CDC935 does not function well. 
+CURE: Fault condition: Recording CD SYNC on DCC900 via digital In/Out connected to a CDC935 changer is causing problems. As soon as the disc is changed the DCC player gets in a hang-up situation. Cause: When a disc is changed, CDC935 generates via digital out: track number 00. Solution: In case of problems the microprocessors in DCC900 should be replaced into software version 2: item stamped service code number QU01 UPD75518GF-0854822 209 31936 QD01 UPD75238GJ-0634822 209 31937 REMARKS : Sets marked MZ07925030xxx and higher are already equipped with software version 2.
+MODEL: DCC900 
+SYMPTOM: Intermittent drop out of audio on playback and record 
+CURE: Phenemena only occurs with digital tapes. With subsitution of the digital board and AD/DA board which did not resolve the fault, the tape deck mechanism (482269120777) was replaced curing the intermittent fault.
+MODEL: DCC900 
+SYMPTOM: Audio distortion at about -30dB level. 
+CURE: Especially occuring when temperature is rising. Until and up to change code MZ06 change the following parts: was becomes Q301 DAC: IC SAA7350 IC SAA7350AGP4822 209 31356 R352 24kÛ ± 1% 1/10W 20kÛ ± 1% 1/10W4822 117 10476 REMARKS : Above mentioned parts have already been changed from change code MZ07 onwards.
+MODEL: DCC900 
+SYMPTOM: Motor of motor drive potmeter R731 makes a squeaking sound. 
+CURE: Wrong motor signal due to defective Q731. Replace transistor Q731.
+MODEL: DCC900 
+SYMPTOM: No tape transport. 
+CURE: Broken driving belt, replace belt (4822 358 31234)
+MODEL: DCC900 
+SYMPTOM: Spot on head, service mode 0C 0F000000 
+CURE: Clean head and capstans.
+MODEL: DCC900 
+SYMPTOM: How to enable/disable Trade Mode. 
+CURE: Actuate TEXT and TIME buttons simultaneously.
+MODEL: DCC900 
+SYMPTOM: Addition in service manual 
+CURE: Addition in service manual In service manual the value of the output impedance has not been published in the specification. The output impedance for both outputs, the fixed output and the variable one, is 440 ohm.
+MODEL: DCC900 
+SYMPTOM: Customer problems when using DCC 
+CURE: Customer problems when using DCC In general playing back pre-recorded DCC-cassettes does not bring problems to users, because playback of such a cassette is more or less simular to operating a CD-player. A number of problems are found in the playing back and/or recording of the user-recorded DCC-cassettes, caused by not proper 'initializing' of ALL these cassettes. Initializing is important because this is closely linked to basic customer-expectations of a digital product: - Track number; - Time indication. The DCC-standard distinguishes 2 different formats of user-recorded DCC-tapes: a. Super-user format b. User format But there are also combinations of the 2 user-recorded formats possible: c. Combinations of the 2 formats. And there is the pre-recorded DCC tape format: d. Pre-recorded DCC SUMMARIZED CHARACTERISTICS: a. Super-user format: - continuous absolute time information available (remaining time is calculated by the set) - Track numbering and track title at start of track are possible. (this means that also renumber is possible) - Initialization required - TOC (Table of Contents) possible at start of track 1 For figures see Audio Service newsletter 63.01 On Display when super-user format is loaded at position a: TRACKTIME - -10:51 b. User format: - No continuous absolute time information available on tape - No track numbering/title. (this means that renumber is not possible) - No initialization required The start markers are only used for track access. On Display when user format is loaded at position b: TRACKTIME : Notice: track is blank! Some DCC typenumbers show counter settings, others the estimated time based on the tacho-signals. c. Combination of the 2 formats. - This format usually happens when the APPEND function is not used. - The APPEND function is designed to guarantee the Super-user format in case a recording is made at the end of a partially recorded tape. When a recording is started on a blank area, the result will always be a User-format. Correction by renumbering is not possible. d. Pre-recorded DCC - Continuous time information available (inclusive absolute time, track time, remaining time etc.) - Track information continuous available - TOC information continuous available - Track title information continuous available. - Display will show on what ever position loaded the track and time information. example: TRACKTIME 210:51
+MODEL: DCC900 
+SYMPTOM: Trackselection 
+CURE: Trackselection Direct track access is meant to search a wanted tracknumber by taking the shortest path to get to the track. Due to the differences in possible tapes, this topic is rather complex: * On a pre-recorded DCC tape, the Table Of Contents is always recorded continuously on the tape. This means that direct track access is possible. When jumping from track 3 to track 8. In this case the side is changed (from A to B) This is the SHORT SEARCH. * On a user-recorded tape, the Table Of Contents (TOC) cannot be recorded continuously. The TOC has be adapted all over the tape as soon as the recording on the tape is changed. For this reason the TOC can only be written at the start of track 1. This means that now jumping from track 3 to 8 results in so called SEQUENCIAL TRACK SEARCH. Jumping from track 3 to track 8 is done via track 4, 5, 6, and 7. In practise it has become clear that when a DCC is loaded, it is in many cases not positioned at the start of track 1. This means that the only alternative is sequential track search: The deck will in some cases not take the shortest path as the location of the required track is unknown. IMPLEMENTATION: DCC900 Writing TOC on user-recorded DCC was planned but did not fit into the microprocessor internal ROM capacity. To delete this possibility from the specification was a last minute decision. Unfortunately the Instruction For Use has not been adapted accordingly. That is why 10-key commands are not accepted (NO TOC message). There is no service solution available. DCC600 Writing TOC on user-recorded tape was also not possible because of the limitations of the microprocessor internal ROM capacity. Lessons are taken from DCC900, that is why the sequential search possibility has been implemented. When a 10-key command is issued and the TOC is not known, the deck will perform this above described sequential search. The result is that DCC600 will in only a few cases not respond to a 10-key command. Due to the fact that the microprocessor of the DCC900 is completely filled and no larger memory is available, a service solution which incorporates sequential search like DCC600 is not possible.
+MODEL: DCC900 
+SYMPTOM: Updating uPs 
+CURE: Updating uPs During the course of production the uPs in 70DCC900 have been modified. Sets produced between stamp MZ03 and MZ07lot30 have old versions. In case one of the two uPs has to be exchanged, in those sets, the other uP has to be replaced by a new version too, because in spare parts warehouse only the last versions are taken on stock. From MZ07lot30 (production week 9248) onwards QU01 reads uPD75518GF-085 (available with service code 4822 209 31936) according to Service Newsletter information 39.18. and QD01 reads uPD75238GJ-063 (available with service code 4822 209 31937) according to Service Newsletter information 42.40
+MODEL: DCC900 
+SYMPTOM: Adjustment head current 
+CURE: Adjustment head current - In case the read/write head of the DCC mechancism should be exchanged and/or the read/write IC's are defective the head current has to be re-adjusted. Because at this moment the needed test equipment is not available, this will be done in a central repair procedure. The following codenumbers are resorted in this repair procedure, at Philips Consumer Service known with code (REPARI 1 and 4): For 70DCC900: The complete tape deck mechanism item service codenumber 001M 4822 691 20777 For 70DCC300, 70DCC380 and 70DCC600: The complete loading mechanism item service codenumber LDU4822 691 20833 and The complete digital board (PCB5) item service codenumber 4822 214 33899 In case of a repair one has to ship, without waiting, the defective item to: Invoice to: Philips Consumer Electronics B.V. 670005 Consumer Service - Price centre 5600 MD Eindhoven building SBP5 The Netherlands Ship to: Philips Consumer Electronics B.V. 676723 Consumer Service 5600 MD Eindhoven building SDM5 The Netherlands ATT: Mr. C. Lieberwirth Please enclose a copy of the invoice inside the carton. The rest of the instructions are according to the PCS repair procedure available at the desk of Mr. Lieberwirth, Repair Manager, Phone +31-40-735509, Fax +31-40-734515
+MODEL: DCC900 
+SYMPTOM: Guidance form 
+CURE: Guidance form - Next Guidance form is enclosed at repairable unit 4822 691 20777. Please notice the wiring which should be included in the returned unit. GUIDANCE FORM REPAIRABLE UNIT 4822 691 20777 Please fill in this form and return it with the defective unit. TYPENUMBER (Unit demounted from set): Serial number : COMPLAINT DESCRIPTION : INFORMATION GATHERED VIA SERVICE MODE FUNCTION (selected via timer) :123456789 ERROR INDICATION (On display) : MORE DETAILED OBSERVATIONS: YESNO DCC SOUND OK ANALOGUE SOUND OK MECHANICAL NOISE OK SPEED OK FRICTIONS OK TAPE TRANSPORT OK Return the defective unit complete assembled according to the drawing on the backside of this paper to: Invoice to: Philips Consumer Electronics B.V. 670005 Consumer Service - Price centre 5600 MD Eindhoven building SBP5 The Netherlands Ship to: Philips Consumer Electronics B.V. 676723 Consumer Service 5600 MD Eindhoven building SDM5 The Netherlands ATT: Mr. C. Lieberwirth CORRECTIVE ACTION/SOLUTION (to be filled in at central repair workshop): Report number:
+MODEL: DCC900 
+SYMPTOM: Codenumber information 
+CURE: Codenumber information DCC Cleaning cassette SBC3500 is from now on available with service codenumber 4822 015 20646.
+MODEL: DCC900 
+SYMPTOM: Initialising DCCE 
+CURE: Initialising DCC NEW DCC CASSETTE: How to initialize the cassette (= making a lead-in recording at the beginning of the tape) is stated in the Instructions for Use. In the various typenumbers the following keys have to be activated: For DCC091, DCC450: REWIND, APPEND For DCC170: REWIND, REC PAUSE For DCC300, DCC380: REWIND, APPEND For DCC600: REWIND, APPEND For DCC730, DCC951: REWIND, REC SELECT/PAUSE For DCC900: REWIND, APPEND For more details: see Instructions for Use of concerned typenumber; chapter recording. After this initialization the track number and (absolute) time information will be recorded on the user-recorded tape. The above shown survey is a simplified universal applyable operation. The most problems are caused by the fact that users are accustomed to apply the record function straight forward, like recording ACC-cassettes. PARTIALLY RECORDED For all typenumbers, except DCC170: Use APPEND to search for end of last recording in case of partially recorded DCC-tape and so proper coupling of old and new recordings is made. For DCC170: Search Manually for END indication of last recording and make new recordings from that spot onwards. OVERWRITING In case of completely overwriting a user-recorded DCC-tape the initializing procedure has to be performed again! CONCLUSION: It is very important to initialize a user-recorded DCC-tape. If a DCC-tape is initialized or not, can easily be seen on the display information in Play-back mode. Starting at the beginning of the tape track time An empty DCC tape:: Not initialized DCC tape (User format) 11 : 24 Initialized DCC tape (Super-user format)312 : 49
