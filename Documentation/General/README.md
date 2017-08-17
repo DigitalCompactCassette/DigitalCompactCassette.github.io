@@ -8,3 +8,6 @@ The website that shares it, claims to have context information for most of its d
 
 ## [I2S Bus Specification](I2SBUS.pdf)
 The I2S (Inter IC Sound) bus is used to transfer digital audio between chips in DCC recorders (and other hardware). It's a simple protocol that defines how two channels of audio of up to 24 bits per sample can be transported over three lines: a clock line, a data line and a line that selects the left or right channel. This document describes the protocol.
+
+## [DCC Chips Overview (Excel format)](Chips.xls)
+A list of all the recorders for which I have [service manuals](../Service%20Manuals), and the chips that they use. Draw your own conclusions :-)
