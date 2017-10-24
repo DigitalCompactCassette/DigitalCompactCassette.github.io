@@ -4,7 +4,7 @@ This directory contains a number of service manuals for various DCC recorders an
 Additionally, there's a list of [DCC Repair Bulletins](philips_dcc_repair_bulletins.txt), obtained via the [TapeHeads forum](http://www.tapeheads.net/showthread.php?t=50502) containing some interesting repair information, and some secrets e.g. about a TOC feature that didn't make it into the DCC-900.
  
 ## [Marantz DD82/DD92](./marantz_dd82_dd92.pdf)
-Marantz' two first DCC recorders were the DD82 and DD92 which are identical except for the color of the enclosure.
+Marantz' two first DCC recorders were the DD82 and DD92 which are identical except for the color of the enclosure. Because they used the TDA1547 D/A converter, they are generally praised as the DCC recorders with the best audio quality.
 
 (First generation)
 
