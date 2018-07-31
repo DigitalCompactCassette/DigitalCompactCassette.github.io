@@ -11,3 +11,6 @@ The I2S (Inter IC Sound) bus is used to transfer digital audio between chips in 
 
 ## [DCC Chips Overview (Excel format)](Chips.xls)
 A list of all the recorders for which I have [service manuals](../Service%20Manuals), and the chips that they use. Draw your own conclusions :-)
+
+## [DCC900 Cursus Materiaal](DCC900CursusMateriaal.pdf)
+Philips organized a course for repair technicians so they could learn how the new DCC900 worked and how they could fix it when it didn't work. It contains a lot of details about how PASC works, which aren't available elsewhere. The document is in Dutch; I will eventually publish an English translation. Thanks to Dr. DCC from the DCC museum for scanning this!
