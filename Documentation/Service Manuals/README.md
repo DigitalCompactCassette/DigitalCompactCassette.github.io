@@ -33,12 +33,25 @@ This was the first portable DCC player (it couldn't record). Developed by Matsus
 
 (Third generation)
 
-## [Philips DCC175/DCC170](./DCC170%20DCC175%20Service%20Manual.zip)
-The DCC-175 was an 18 bit portable DCC recorder developed by Marantz. No support for track/title display for super-user tapes, but it can be connected to a computer using the PC-link cable. The mechanism is identical to the DCC-170 and there are commonalities in the schematics between the DCC-170 and DCC-175 too, but it's not possible to hack the DCC-170 to make it into a DCC-175: the PCB designs are very different.
+## [Philips DCC175/DCC170](./philips_dcc175_dcc170.pdf)
+The DCC-175 was an 18 bit portable DCC recorder developed by Marantz. No support for track/title display for super-user tapes (only for prerecorded tapes), but it can be connected to a computer using the PC-link cable. The mechanism is identical to the DCC-170 and there are commonalities in the schematics between the DCC-170 and DCC-175 too, but it's not possible to hack the DCC-170 to make it into a DCC-175: the PCB designs are very different.
    
 The DCC-175 service manual consisted of the DCC-170 manual with a few dozen pages describing the differences between the DCC-175 and the DCC-170. Waling Tiersma provided a paper copy of the service manual, and Jac Goudsmit scanned it at the highest resolution that his dad's scanner supported: 300dpi.
 
 (Third generation)
+
+### Now in PDF format!
+(2018-07-31) I finally converted my [original scans from 1997](./DCC170%20DCC175%20Service%20Manual.zip) of the DCC-175/170 service manual to PDF. Unfortunately the original scans were not of a quality that one might expect in 2018 but I did the best I could:
+
+- Converted all the files to uncompressed BMP format to minimize the chance of adding more compression artefacts along the way
+- Stitched the fold-out pages together
+- Adjusted the color balance of the pages that were scanned in color (my dad's scanner's calibration was off, and I knew it but I couldn't do anything about it at the time)
+- Enlarged the black-and-white images which were made at 150dpi so they all end up being the same scale
+- Enlarge the pages so they all have a matching height of 3440 pixels
+- Convert all the files back to JPEG
+- Converted the JPEGs to PDF.
+
+I used IrfanView, Microsoft Image Composite Editor and convert-jpg-to-pdf.net. I considered using a filter to remove the JPEG artefacts but I decided not to, because I was afraid it would remove too much detail. That may have made the PDF larger than needed but since this service manual seems to be extremely rare, it seems like it would be the right decision. 
 
 ### Known errata
 On page 010.jpg, near the bottom, there are 8 buffers drawn, six of which are used to buffer the signals to the PC-link connector (which is on page 011.jpg, bottom right). The buffer for SBDAI (QA54-2/2, grid reference I10) is drawn the wrong way and a pin numbers is wrong: The output is pin 3, not 2 and data goes from the bottom to the top.
