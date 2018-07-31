@@ -1,6 +1,8 @@
 # [Home](../..)/[Documentation](..)/[Datasheets](.)
 This directory contains datasheets for a number of DCC-related chips by Philips. These were all found on the Internet.
 
+For an overview of which recorders use which chips, download [this Excel spreadsheet](../General/chips.xls).
+
 Various documentation about DCC from reliable sources such as Philips, mention that there were three generations of DCC recorders and chipsets. The only generation of chips that was really well documented (and for which datasheets are available online) is the third generation. The [DCC-951 Circuit Description](../Service%20Manuals/philips_dcc951_circuit_description.pdf) gives a good overview of how these IC's work together.
 
 To play a DCC tape, the player needs to:
@@ -18,49 +20,52 @@ When recording, the DCC recorder needs to:
 - The PASC stream is combined with SYSINFO data and modulated using 8-to-10 encoding, and multiplexed. The AUX data is also part of the multiplexed signal and may contain track markers. All 9 tracks can be recorded at the same time, or the 9th track can be recorded while the audio tracks are playing.
 - The multiplexed signal is processed through the write amplifier and recorded on tracks 0-8 (or track 8 only, when recording track markers on existing tapes).
 
-If you're new to the world of DCC, you will probably want to start by reading the datasheet for the SAA2023 or SAA3323 Drive Processor (DRP). They are essentially the same, except for the supply voltage (5V vs. 3.3V). DRPs were used in the last recorders that were produced, and perform a lot of functions that were done by multiple chips in earlier recorders. If you understand the functions of the DRP's, it's not too hard to understand the schematics of the earlier recorders, even though they use earlier generations of chips for which there is no datasheet.  
+If you're new to the world of DCC, you will probably want to start by reading the datasheet for the SAA2023 or SAA3323 Drive Processor (DRP). They are essentially the same, except for the supply voltage (5V vs. 3.3V). DRPs were used in the last recorders that were produced, and combine a lot of functions that were done by multiple chips in earlier recorders. If you understand the functions of the DRP's, it's not too hard to understand the schematics of the later as well as the earlier recorders, even though earlier recorders use older chips for which there is no datasheet.  
 
-## [SAA2003 Stereo Filter and Codec (SFC)](./SAA2003.pdf)
-The SAA2003 Stereo Filter and Codec (SFC) converts the PASC (MPEG) subband data into baseband PCM data, and vice versa. Basically, MPEG divides (filters) the audio signal into 32 frequency bands (hence "subbands") and this chip takes care of that conversion, in both directions. What it can't do is the lossy compression part of MPEG/PASC so during recording it needs help from an Adaptive Allocator and Scaler. The SAA2003 is the 18-bit version of the PASC codec, which was used in the latest produced recorders.
+## RDAMP: Read Amplifier: TDA1317, [TDA1380](.TDA1380.pdf) and [TDA1318](./TDA1318.pdf)
+The Read Amplifier amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signals for further processing. It needs external signals to control the multiplexing. The TDA1318 is intended for 9 heads (the DCC-130 has two TDA1318's) and the TDA1380 has circuitry for 18 heads. We have no information about the TDA1317, which was used in the first and second generation recorders.
 
-## [SAA2013 Adaptive Allocator and Scaler (AAS)](./SAA2013.pdf)
-The SAA2013 Adaptive Allocator and Scaler (AAS) is used in the last generation of recorders to help the SFC compress the filtered recording stream into a bit stream with a bandwidth of 384 kilobits per second. In theory, if the recorder is recording a digital audio stream that's generated from a DCC player, the AAS has nothing to do because all the inaudible parts of the signal are already gone and the filtered stream from the SFC already has a low enough bit rate to fit on the tape.
+## DEQ: De-Equalizer: SAA2051 and [SAA2032](SAA2032.pdf)
+The DEQ was used only in the DCC-130 to process the analog multiplexed input signal from the read amplifier. It worked together with the SAA2022 TFE. We have no information about the SAA2051 which was used in first and second generation recorders.
 
-## [SAA2023 Drive Processor (DRP)](./SAA2023.pdf)
-The SAA2023 is the Drive Processor (DRP) which is used in the DCC730 and DCC951, and in the DCC822 car stereo(?). It takes care of all the conversion from multiplexed head signals to PASC and back, and generates timing signals for the capstan motor and the surrounding chips.
+## ERCO: Error Correction: SAA2031
+The ERCO chip was in charge of detecting and correcting errors from the incoming signal from the tape during playback, and formatted the signals that went to the tape during recording. We have no information about it.
 
-## [SAA3323 Drive Processor (DRP)](./SAA3323.pdf)
-The SAA3323 is also a DRP, and it performs the same functions as the SAA2023, but it takes a 3.3V power supply instead of 5V, so it's used in the DCC134, DCC170 and DCC175 portable players and recorders.
+## DDSP: Digital Drive Signal Processor: SAA2041
+The DDSP controls the capstan motor based on the incoming data during playback, or runs it at a fixed speed for recording and analog cassette playback. We have no information about it.
+ 
+## TFE: Tape Formatting and Error correction: [SAA2022](SAA2022.pdf)
+The TFE is used in the DCC-130 only, to combine the functionality of the ERCO (Error Correction) and DDSP (Digital Drive Signal Processor) chips in the first and second generation recorders. It needs to work together with the SAA2032 De-Equalizer (DEQ) chip.
 
-## [SAA7350 Digital Analog Converter (DAC)](./SAA7350.pdf)
-The SAA7350 is a stereo Digital to Analog Converter (DAC). It can work together together with the TDA1547 to generate an even better analog signal.
+## DRP: Drive Processor: [SAA2023](./SAA2023.pdf) and [SAA3323](./SAA3323.pdf)
+The DRP integrates the functionality of the DEQ (De-Equalizer), ERCO (Error Correction) and DDSP (Digital Drive Signal Processor) from the first and second generation recorders into a single chip. It takes care of all the conversion from multiplexed head signals to PASC and back, and generates timing signals for the capstan motor and the surrounding chips. The SAA2023 is used in the stationary 3rd generation recorders and the SAA3323 is used in the Marantz portables (DCC134, DCC170, DCC175). The only difference between the two chips appears to be that the SAA2023 uses a 5V power supply, whereas the SAA3323 uses a 3.3V power supply.
 
-## [SAA7366 Analog Digital Converter (ADC)](./SAA7366T.pdf)
-The SAA7366T is a stereo Analog to Digital Converter (ADC) that generates an 18 bit digital PCM data stream.
+## SBC: Subband Codec: SAA2021
+The SBC converts PCM to PASC (MPEG) subband data. It was used in first and second generation recorders. We have no information about this chip.
 
-## [SM5840 Digital Filter](./SM5840FS.pdf)
-The SM5840 is an 8-times oversampling digital filter for digital audio.
+## SBF: Subband Filter: SAA2001
+The SBF is used to synthesize PCM data from a PASC data stream. One of these was needed for each stereo channel. It was used in first and second generation recorders. We have no information about this chip.
 
-## [TDA1305 Digital Analog Converter (DAC)](./TDA1305T.pdf)
-The TDA1305T is a stereo Digital to Analog Converter (DAC)
+## SFC: Stereo (or Subband) Filter and Codec: [SAA2002](./SAA2002.pdf) and [SAA2003](./SAA2003.pdf)
+The SFC combines the functionality of the Subband Codec and Subband Filter in earlier recorders. It converts PCM baseband audio into PASC (MPEG) subband data, and vice versa. What it *can't* do is the lossy compression part of PASC, so during recording it needs help from an Adaptive Allocator and Scaler. The SAA2002 was used only in the DCC-130, whereas the SAA2003 was used in all the 3rd generation recorders.
 
-## [TDA1309 Analog / Digital / Analog Converter (ADC/DAC)](./TDA1309H.pdf)
-The TDA1309H is a stereo Analog to Digital and Digital to Analog Converter (ADC/DAC).
+## AAS (or ADAS): Adaptive Allocator and Scaler: SAA2011, [SAA2012](./SAA2012.pdf) and [SAA2013](./SAA2013.pdf)
+The AAS is used during recording to apply the psycho-acoustic model of PASC to the subband data stream from the SFC, to determine how many bits should be allocated to each subband, and what the multiplication factor (scale) of each subband should be. The SAA2013 was used in all third generation recorders (together with the SAA2003 SFC), whereas the SAA2012, even though it appears to be more advanced, wasn't used in any recorders at all. There is no information about the SAA2011 which was used in the first and second generation recorders.
 
-## [TDA1315 Digital Audio Input/Output (DAIO)](./TDA1315H.pdf)
-The TDA1315H is the Digital Audio Input Output Circuit (DAIO) that converts the IEC958 (S/PDIF) signal from a coax or optical input to I2S (Inter-IC Sound) bit stream, and back. It also encodes and decodes SCMS bits in the IEC958 stream.
+## DAC: Digital Analog Converter: [SAA7350](./SAA7350.pdf), [TDA1547](./TDA1547.pdf), SAA7321, SAA7323, UPD63200, TDA1313 and [TDA1305](./TDA1305T.pdf)
+The DAC converts a PCM signal at 48kHz, 44.1kHz or 32kHz to analog. The SAA7350 can also provide timing signals to a TDA1547. It was used in many digital audio devices, not just DCC recorders. The TDA1305 is 18 bits and was used for the stationary 3rd generation recorders. We have no information about UPD63200 which was used in the DCC130, SAA7321 and SAA7323 which were used in second generation recorders, or TDA1313 which was used in the DCC134.
 
-## [TDA1318 Read Amplifier (9 heads)](./TDA1318.pdf)
-The TDA1318H is a read amplifier that amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signals for further processing. It needs external signals to control the multiplexing. This read amplifier has 9 inputs and is intended for stationary recorders.
+## DF: Digital Filter: [SM5840](./SM5840FS.pdf) and SM5881
+The SM5840 is an 8-times oversampling digital filter for digital audio, that works together with the SAA7350. We have no information about the SM5881 which was used in the DCC130 and DCC134.
 
-## [TDA1319 Write Amplifier (9 heads)](./TDA1319.pdf)
-The TDA1319T is a write amplifier that's connected to the DCC recording heads. It demultiplexes the formatted digital stream with modulated data uses it to control the current through the nine recording coils in the head.
+## ADC: Analog Digital Converter: AK5326 and [SAA7366](./SAA7366T.pdf)
+The SAA7366T is an 18 analog to digital converter used in 3rd generation recorders. We have no information about the AK5326 which was used in first and second generation recorders.
 
-## [TDA1380 Read Amplifier (18 heads)](./TDA1380.pdf)
-The TDA1380 is a read amplifier that amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signal for further processing. It needs external signals to control the multiplexing. As you may know, portable players have heads that are different from stationary players: portable heads have 18 MR channels whereas stationary recorders have a 9-channel head that gets rotated around for side B. This read amplifier has 18 inputs (9 for each side) and is intended for portable recorders.
+## ADC/DAC: Combined Analog-Digital and Digital-Analog converter: [TDA1309](./TDA1309H.pdf)
+The TDA1309H was an 18-bit analog-to-digital and digital-to-analog converter that was used in the Marantz portable recorders (DCC170/DCC175).
 
-## [TDA1381 Write Amplifier (18 heads)](./TDA1381.pdf)
-The TDA1381 is a write amplifier that's used to generate the current for DCC recording heads. This particular write amplifier has 18 outputs (9 for each side) and is intended for portable recorders that don't have a rotating head.
+## DAI/DAIO: Digital Audio Interface / Digital Audio Input/Output: [M51581](./M51581FP.pdf) and [TDA1315](./TDA1315H.pdf)
+The DAI or DAIO converts the IEC958 (S/PDIF) signal from a coax or optical input to I2S (Inter-IC Sound) bit stream, and back. It also encodes and decodes SCMS bits in the IEC958 stream. The M51581 was used in first and second generation recorders. The TDA1315 supports 18 bit audio and was used in 3rd generation recorders.
 
-## [TDA1547 Digital Analog Converter](./TDA1547.pdf)
-The TDA1547 is a high quality D/A converter that works together with the SAA7350.
+## WRAMP: Write Amplifier: TDA1316, [TDA1319](./TDA1319.pdf) and [TDA1381](./TDA1381.pdf) 
+The write amplifier is connected to the DCC recording heads. It demultiplexes the formatted digital stream with modulated data and uses it to control the current through the recording coils in the head. The TDA1319 support 9 heads, whereas the TDA1381 supports 18 heads. We have no information about the TDA1316 which was used in the first and second generation recorders.
