@@ -41,7 +41,7 @@ The DCC-175 service manual consisted of the DCC-170 manual with a few dozen page
 (Third generation)
 
 ### Now in PDF format!
-(2018-07-31) I finally converted my [original scans from 1997](./DCC170%20DCC175%20Service%20Manual.zip) of the DCC-175/170 service manual to PDF. Unfortunately the original scans were not of a quality that one might expect in 2018 but I did the best I could:
+(2018-07-31) I finally converted my [original scans from 1997](./DCC170%20DCC175%20Service%20Manual.zip) of the DCC-175/170 service manual to [PDF](./philips_dcc175_dcc170.pdf). Unfortunately the original scans were not of a quality that one might expect in 2018 but I did the best I could:
 
 - Converted all the files to uncompressed BMP format to minimize the chance of adding more compression artefacts along the way
 - Stitched the fold-out pages together
