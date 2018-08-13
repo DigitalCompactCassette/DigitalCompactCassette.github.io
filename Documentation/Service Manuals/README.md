@@ -40,21 +40,25 @@ The DCC-175 service manual consisted of the DCC-170 manual with a few dozen page
 
 (Third generation)
 
-### Now in PDF format!
-(2018-07-31) I finally converted my [original scans from 1997](./DCC170%20DCC175%20Service%20Manual.zip) of the DCC-175/170 service manual to [PDF](./philips_dcc175_dcc170.pdf). Unfortunately the original scans were not of a quality that one might expect in 2018 but I did the best I could:
+### [Now in PDF format!](./philips_dcc175_dcc170.pdf)
+(2018-07-31) Unfortunately the qualtiy of the [original scans](./DCC170%20DCC175%20Service%20Manual.zip) might not be what one would expect in 2018. They were processed as follows:
 
 - Converted all the files to uncompressed BMP format to minimize the chance of adding more compression artefacts along the way
 - Stitched the fold-out pages together
 - Adjusted the color balance of the pages that were scanned in color (my dad's scanner's calibration was off, and I knew it but I couldn't do anything about it at the time)
 - Enlarged the black-and-white images which were made at 150dpi so they all end up being the same scale
-- Enlarge the pages so they all have a matching height of 3440 pixels
-- Convert all the files back to JPEG
+- Enlarged the pages so they all have a matching height of 3440 pixels
+- Converted all the files back to JPEG (I tried various settings to get the best quality)
 - Converted the JPEGs to PDF.
 
 I used IrfanView, Microsoft Image Composite Editor and convert-jpg-to-pdf.net. I considered using a filter to remove the JPEG artefacts but I decided not to, because I was afraid it would remove too much detail. That may have made the PDF larger than needed but since this service manual seems to be extremely rare, it seems like it would be the right decision. 
 
 ### Known errata
+![Corrected schematic fragment](./philips_dcc175_correction.png)
+
 On page 010.jpg, near the bottom, there are 8 buffers drawn, six of which are used to buffer the signals to the PC-link connector (which is on page 011.jpg, bottom right). The buffer for SBDAI (QA54-2/2, grid reference I10) is drawn the wrong way and a pin numbers is wrong: The output is pin 3, not 2 and data goes from the bottom to the top.
+
+The diagram above shows the correct direction and pin number near the little red arrows.
 
 ## [Philips DCC-300](./philips_dcc300.pdf)
 Narrow format DCC recorder, similar to the DCC-380, DCC-450 and DCC-600. This is not a full service manual but some additional information.
@@ -85,6 +89,11 @@ The first DCC recorder
 18 bit DCC recorder with support for super-user tapes. Had a Turbo Drive mechanism for fast wind/rewind. Virtually identical to the DCC-730 but it had some extra connections for the 900-series remote control bus, and it had a dot-matrix display.
 
 The circuit description document is an addendum to the DCC-951 service manual, but is mostly about the DCC Deck Unit (DDU-2113) that was used in the DCC-951 and DCC-730. The document makes it clear without a doubt that by 1993, Philips was trying hard to make the Turbo Drive mechanism with the 3rd generation chipset a standard in the world. This document, intended for service technicians and service trainers, plus the datasheets for the third-generation chipset, are a great source of information about the DCC standard and how a DCC recorder works. Definitely worth a read!
+
+(Third generation)
+
+## [Philips FW-68](./philips_fw68.pdf)
+A mini stereo system with radio tuner, CD player, analog cassette recorder and DCC recorder all integrated into one device. It doesn't have a text display so it can't show (or record) track titles. It's the only front loading DCC recorder that Philips produced (the DCC-850 and DCC-771 double-deck were also front loaders but they never went into production).
 
 (Third generation)
 
