@@ -45,3 +45,10 @@ Many thanks to Jonathan Dupré for making some of these available.
 - DCC Backup for DOS [Version 3.00a](DCCBUDOS.EXE)
 
 For the floppy images, you can use a program such as [WinImage](http://www.winimage.com).
+
+## DCC2WAV
+This is a program that works under Windows 3.1, Windows 95 and Windows 98 and can be used to convert DCC-Studio files to WAV files _and convert WAV files to DCC too_. I (Jac) seem to remember that there were two separate DOS programs DCC2WAV and WAV2DCC but I may have remembered it wrong, or maybe Philips combined the functionality into a new single program for Windows and the DOS software was discontinued.
+
+Philips mailed this (on a floppy disk) to registered users of the DCC-Studio software in the Netherlands in 1996. Thanks to Ralf Porankiewicz at the DCC Museum for providing this.
+
+- Download it [here](DCC2WAV.zip).
