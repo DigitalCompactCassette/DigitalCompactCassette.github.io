@@ -6,6 +6,13 @@ This was downloaded from [www.cieri.net](http://www.cieri.net/Documenti/Document
 
 The website that shares it, claims to have context information for most of its downloads but I can't find the document through the menus, let alone any accompanying text about where it originated (the website is in Italian and my Italian is not very good). It appears that this may have been a hand-out given to those that were present at a Matsushita announcement of the DCC format. It contains lots of interesting details that are not otherwise available to the public, such as bit rates of binary data streams, and the length and formatting of tape blocks and tape frames. This really helps when reading the datasheets of e.g. the Drive Processors where the reader is assumed to have this information.
 
+## [Panasonic Technical Guide vol. 31: Auto DCC Technology](CQ-DC1.pdf)
+The [web page](https://servlib.com/panasonic/car-audio/cq-dc1.html) where this document was downloaded, pretends that this is a service manual for the (rare) CQ-DC1 car stereo with DCC player. However, it appears to be a service bulletin of some sort, for Panasonic technicians who were interested in DCC technology.
+
+The document describes the DCC mechanism inside the CQ-DC1 car stereo, but doesn't even offer complete schematics for it. But on the other hand, it has a fairly complete description of the DCC system, including PASC, tape formatting, description of the AUXINFO data (unfortunately not much information about SYSINFO), error correction, and a lot of information about the early Philips DCC chipset (for which there are no datasheets).
+
+Thanks for Ralf "Dr. DCC" Porankiewicz at the DCC Museum for finding this!
+
 ## [I2S Bus Specification](I2SBUS.pdf)
 The I2S (Inter IC Sound) bus is used to transfer digital audio between chips in DCC recorders (and other hardware). It's a simple protocol that defines how two channels of audio of up to 24 bits per sample can be transported over three lines: a clock line, a data line and a line that selects the left or right channel. This document describes the protocol.
 
