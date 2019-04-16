@@ -22,8 +22,8 @@ When recording, the DCC recorder needs to:
 
 If you're new to the world of DCC, you will probably want to start by reading the datasheet for the SAA2023 or SAA3323 Drive Processor (DRP). They are essentially the same, except for the supply voltage (5V vs. 3.3V). DRPs were used in the last recorders that were produced, and combine a lot of functions that were done by multiple chips in earlier recorders. If you understand the functions of the DRP's, it's not too hard to understand the schematics of the later as well as the earlier recorders, even though earlier recorders use older chips for which there is no datasheet.  
 
-## RDAMP: Read Amplifier: TDA1317, [TDA1380](.TDA1380.pdf) and [TDA1318](./TDA1318.pdf)
-The Read Amplifier amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signals for further processing. It needs external signals to control the multiplexing. The TDA1318 is intended for 9 heads (the DCC-130 has two TDA1318's) and the TDA1380 has circuitry for 18 heads. We have no information about the TDA1317, which was used in the first and second generation recorders.
+## RDAMP: Read Amplifier: [TDA1317](TDA1317.pdf), [TDA1380](TDA1380.pdf) and [TDA1318](./TDA1318.pdf)
+The Read Amplifier amplifies and filters the signals from the magneto-resistive DCC playback heads, and multiplexes the analog signals for further processing. It needs external signals to control the multiplexing. The TDA1317 and TDA1318 are intended for use with 9-track head assemblies and the TDA1380 is for 18-track heads. Stationary recorders with pivoting heads used the TDA1317 or TDA1318; portable recorders with fixed heads could use two 9-track chips (e.g. the DCC-130 uses two TDA1318) or a single 18-track chip. The TDA1317 has non-multiplexed analog outputs as well as a multiplexed output.
 
 ## DEQ: De-Equalizer: SAA2051 and [SAA2032](SAA2032.pdf)
 The DEQ was used only in the DCC-130 to process the analog multiplexed input signal from the read amplifier. It worked together with the SAA2022 TFE. We have no information about the SAA2051 which was used in first and second generation recorders.
