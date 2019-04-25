@@ -6,3 +6,6 @@ Directory with software from Philips that was originally included with, or distr
 
 ## [JacGoudsmit](./JacGoudsmit)
 DCC-related software written by Jac Goudsmit.
+
+## [Others](./Others)
+DCC-related software written by others.
