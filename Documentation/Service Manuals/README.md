@@ -75,10 +75,17 @@ Stationary recorder with sideways drawer, similar to DCC-300, DCC-380 and DCC-45
 
 (Third generation)
 
-## [Philips DCC-811 / DCC-821](./philips_dcc811_dcc821.pdf)
+## [Philips DCC-811/DCC-821](./philips_dcc811_dcc821.pdf)
 Car stereo with DCC player.
 
 (First generation)
+
+## [Philips DCC-822/DCC-824 (partial)](22DC822.zip)
+Some scanned pages from this car stereo with DCC player (the DCC-824 is identical to the DCC-822 but was sold with the optional wired remote control), but not the entire service manual. Unfortunately no information about the DCC drive (that was probably a separate document anyway).
+
+Thanks Ron Jacobs for sending us what you had. If you can provide a better version, please contact the DCC Museum!
+
+(Third generation)
 
 ## [Philips DCC-900](./philips_dcc900.pdf)
 The first DCC recorder
