@@ -24,3 +24,20 @@ Philips organized a course for repair technicians so they could learn how the ne
 
 ## [DCC Mastering](DCC%20Mastering.pdf)
 Brochure from Philips Key Modules about how pre-recorded DCC's are mastered. Some interesting details about equipment that was used.
+
+## [Tape Design (and some history)](Peter%20Doodson%20Tape%20Design.pdf)
+Various documents shared with the DCC Museum by [Peter Doodson](http://www.doodson.co.uk/Peter.html), the designer of the CD Jewel Case and the DCC cassette. Including:
+
+
+- A report of a presentation by Gijs Wirtz (Product Manager DCC at Philips) and Cor van Dijk (Managing Director at Polygram) about the need for a digital compact cassette, code named "Project Decor".
+- A drawing of the DCC cassette with basic dimensions. 
+- Requirements for the DCC cassette outer packaging, including proposals to put the DCC cassette in a CD Jewel Case.
+- Meeting minutes from 1990 where it was decided to use a box with the same outer dimensions as the analog cassette. Also includes interesting tidbits about EMI and BMG "expressing great interest" in DCC text (ITTS), and about a settlement in a lawsuit that evidently made audio CD licenses twice as expensive as before.
+- DCC double pack design drawings; these were never produced as far as we know.
+- A document from from 1994 by Smulders Corporate and Marketing Communications BV, Helmond, The Netherlands, with what looks like the concept text for a press release about DCC design.
+- Reproduction of an article about DCC design in Domus Magazine, January 1994.
+- Reproduction of an article in a Dutch newspaper reporting that all prerecorded DCC cassettes in Japan were recalled just before DCC recorders were introduced (Dutch).
+- Reproduction of a page of "Philips News" of September 28, 1992 reporting the opening of the DCC tape factory in Amersfoort, the Netherlands. But also has some bad news about Philips delisting their stocks at the Tokyo stock exchange and the expectation that Philips' net income of 1992 would be only half of 1991.
+- Some concept art of various variations of designs for the DCC cassette.
+
+Thank you, Peter!
