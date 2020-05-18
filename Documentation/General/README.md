@@ -41,3 +41,8 @@ Various documents shared with the DCC Museum by [Peter Doodson](http://www.doods
 - Some concept art of various variations of designs for the DCC cassette.
 
 Thank you, Peter!
+
+## [Philips DCC System Description Volume 1](Philips%20DCC%20System%20Description%20Draft.pdf)
+This is what looks like the official DCC specification, printed in September 1994. Everything you need to know if you want to build your own DCC recorder (and have a license from Philips of course).
+
+Thank you very much to the anonymous donor who donated this to the DCC Museum!
