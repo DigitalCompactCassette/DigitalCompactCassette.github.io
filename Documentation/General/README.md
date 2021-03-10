@@ -13,6 +13,9 @@ The document describes the DCC mechanism inside the CQ-DC1 car stereo, but doesn
 
 Thanks for Ralf "Dr. DCC" Porankiewicz at the DCC Museum for finding this!
 
+## [DCC Getest (Dutch)](RB_DCC_Getest.pdf)
+An article in Dutch, translated from German, in Dutch magazine "RadioBulletin", May 1992.
+
 ## [I2S Bus Specification](I2SBUS.pdf)
 The I2S (Inter IC Sound) bus is used to transfer digital audio between chips in DCC recorders (and other hardware). It's a simple protocol that defines how two channels of audio of up to 24 bits per sample can be transported over three lines: a clock line, a data line and a line that selects the left or right channel. This document describes the protocol.
 
