@@ -6,14 +6,14 @@ He shared a lot of information and work-in-progress, and some of it is reproduce
 
 Other files were created by Jac Goudsmit.
 
-## [DISASSEM.ZIP (by Waling Tiersma)](.DISASSEM.ZIP)
+## [DISASSEM.ZIP (by Waling Tiersma)](./DISASSEM.ZIP)
 This is a complete dump of Waling's work on the DCC driver for DOS (there was a DOS program to make backups on DCC, and Waling figured that it would be easier to disassemble a DOS program than a Windows program to reverse-engineer the PC-link cable, so that's what he started with).
 
 He used IDA (Interactive DisAssembler) 3.04 and 3.5. That program is [still available](https://www.hex-rays.com/index.shtml) and there is a [free evaluation version](https://www.hex-rays.com/products/ida/support/download.shtml) that may or may not be able to open the .IDA files in this ZIP file to continue where he left off.
 
 Obviously we're not allowed to redistribute IDA so it's not part of this ZIP file.
 
-## [plaatjes.zip (by Jac Goudsmit)](.plaatjes.zip)
+## [plaatjes.zip (by Jac Goudsmit)](./plaatjes.zip)
 A few pictures of the inside of the PC-link cable, for those who never had one (as far as we, the members of the DCC-L email discussion list, could determine back in the 1990s, probably less than 1000 of those cables were made). I think I made these by putting the cable on top of the scanner, that's why they look so bad. I may put some better pictures online later.
 
 ## [Shuttle EPST-1 documentation (by Shuttle Technologies)](./Shuttle%20EPST-1%20docs.ZIP)
