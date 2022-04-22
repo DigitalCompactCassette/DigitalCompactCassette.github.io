@@ -9,7 +9,7 @@ Marantz' two first DCC recorders were the DD82 and DD92 which are identical exce
 (First generation)
 
 ## [Optimus DCT-2000 (part 1)](./optimus_dct-2000_1.pdf) [(part 2)](./optimus_dct-2000_2.pdf)
-This is the DCC recorder that RadioShack sold in the United States and elsewhere. These documents are not complete service manuals but do give some information. Most of the DCT-2000 was developed by Optimus/RadioShack (probably RCA/Thompson) but they used a mechanism and two plugin boards from Philips.
+This is the DCC recorder that RadioShack sold in the United States and elsewhere. These documents are not complete service manuals but do give some information. Most of the DCT-2000 was developed by Tandy but they used a mechanism and two plugin boards from Philips. The plugin boards are different from the plugin boards that Philips, Marantz and Matsushita used in their recorders.
 
 (First generation)
 
