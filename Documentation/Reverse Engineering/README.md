@@ -17,7 +17,13 @@ Obviously we're not allowed to redistribute IDA so it's not part of this ZIP fil
 A few pictures of the inside of the PC-link cable, for those who never had one (as far as we, the members of the DCC-L email discussion list, could determine back in the 1990s, probably less than 1000 of those cables were made). I think I made these by putting the cable on top of the scanner, that's why they look so bad. I may put some better pictures online later.
 
 ## [Shuttle EPST-1 documentation (by Shuttle Technologies)](./Shuttle%20EPST-1%20docs.ZIP)
-Shuttle Technologies was the name of a company that produced interfaces to connect SCSI devices to (IEEE-1284) parallel ports. This zip file contains some information about the EPST-1 parallel-to-SCSI adapter. This may be totally irrelevant to DCC and the PC-link cable, but it might help to reverse-engineer the ECP and 4-bit data transfer protocols that the PC-link cable is capable of.
+Shuttle Technologies was the name of a company that produced interfaces to connect SCSI devices to (IEEE-1284) parallel ports. We suspect that Philips licensed some Intellectual Property from Shuttle to make the custom chip in the PC-Link adapter, because the name shows up in the code. 
 
-There are two .PRN files in the ZIP file which were apparently schematics produced with the "Print To File" feature of Orcad. If anyone knows how to reproduce the drawings, let us know!
+This zip file contains some information about the EPST-1 parallel-to-SCSI adapter. This may be totally irrelevant to DCC and the PC-link cable, but it might help to reverse-engineer the ECP and 4-bit data transfer protocols that the PC-link cable is capable of.
+
+There are two .PRN files in the ZIP file which were apparently schematics produced with the "Print To File" feature of Orcad. Thanks to Christian Felique, these have now be converted from PCL to PDF:
+
+* [PDF version of SHUTCON0.PRN](./SHUTCON0.pdf)
+* [PDF version of SHUTCON1.PRN](./SHUTCON1.pdf)
+
  
