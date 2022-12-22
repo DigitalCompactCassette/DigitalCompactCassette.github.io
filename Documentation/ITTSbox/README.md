@@ -52,3 +52,8 @@ The second EPROM and 8032 do the work of interpreting the data and formatting it
  
 * ["DAI V1.1"](./ITTS%20DAI%20V1.1.bin)
 * [blank label](./ITTS%20blank%20label.bin)
+
+The DCC Museum got a second ITTS decoder in 2021. The DAI EPROMs are identical between the two machines but the second machine's main EPROM is different from the EPROM with the blank label in the first machine. The second ITTS box seems to have a bit more debugging in it, and it appears that the code is older than the first machine: The first EPROM contains a string "25 June 1992 version 3.1" and the second EPROM contains "25 May 1992 version 2.3". This is an image of the main ROM of the second (older) machine:
+
+* ["2220"](./ITTS29%202220.bin)
+ 
