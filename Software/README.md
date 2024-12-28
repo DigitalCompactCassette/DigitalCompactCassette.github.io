@@ -9,3 +9,6 @@ DCC-related software written by Jac Goudsmit.
 
 ## [Others](./Others)
 DCC-related software written by others.
+
+## [ROM Dumps](./ROM)
+Some binary files extracted from ROM chips and microcontrollers in DCC hardware.
