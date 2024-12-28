@@ -53,12 +53,8 @@ The DCC-175 service manual consisted of the DCC-170 manual with a few dozen page
 
 I used IrfanView, Microsoft Image Composite Editor and convert-jpg-to-pdf.net. I considered using a filter to remove the JPEG artefacts but I decided not to, because I was afraid it would remove too much detail. That may have made the PDF larger than needed but since this service manual seems to be extremely rare, it seems like it would be the right decision. 
 
-### Known errata
-![Corrected schematic fragment](./philips_dcc175_correction.png)
-
-On page 010.jpg, near the bottom, there are 8 buffers drawn, six of which are used to buffer the signals to the PC-link connector (which is on page 011.jpg, bottom right). The buffer for SBDAI (QA54-2/2, grid reference I10) is drawn the wrong way and a pin numbers is wrong: The output is pin 3, not 2 and data goes from the bottom to the top.
-
-The diagram above shows the correct direction and pin number near the little red arrows.
+### [Known errata](./DCC175_errata.md)
+Click the title of this paragraph for important corrections to errors in the DCC175 Service Manual. 
 
 ## [Philips DCC-300](./philips_dcc300.pdf)
 Narrow format DCC recorder, similar to the DCC-380, DCC-450 and DCC-600. This is not a full service manual but some additional information.
